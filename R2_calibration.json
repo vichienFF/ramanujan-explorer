@@ -1,0 +1,65 @@
+{
+ "seed": 20260928,
+ "calibration": [
+  {
+   "id": "C1",
+   "value": "7.1546366410696034653377377212",
+   "answer_hidden": "(3+pi)/(4-pi)",
+   "family": "pi"
+  },
+  {
+   "id": "C2",
+   "value": "0.684800536795401981234425979856",
+   "answer_hidden": "2/(5-3*log(2))",
+   "family": "log2"
+  },
+  {
+   "id": "C3",
+   "value": "0.950751282949379964209287175796",
+   "answer_hidden": "8/(7*zeta(3))",
+   "family": "zeta3"
+  },
+  {
+   "id": "C4",
+   "value": "1.54587203185195305072707973667",
+   "answer_hidden": "(1+2*catalan)/(2*catalan)",
+   "family": "catalan"
+  },
+  {
+   "id": "C5",
+   "value": "0.762759763501813188062325980964",
+   "answer_hidden": "4*sqrt(2*pi)/gamma(mpf(1)/4)**2",
+   "family": "lemniscate"
+  },
+  {
+   "id": "C6",
+   "value": "2.55982826494224241323085989868",
+   "answer_hidden": "18/(zeta(2, mpf(1)/3) - zeta(2, mpf(2)/3))",
+   "family": "L2_chi3"
+  },
+  {
+   "id": "C7",
+   "value": "2.33946926735387381682784647049",
+   "answer_hidden": "gamma(mpf(1)/3)/2 + 1",
+   "family": "gamma13"
+  },
+  {
+   "id": "C8",
+   "value": "11.0938610609243272651166654644",
+   "answer_hidden": "(1+1/agm(1,sqrt(2)))/(1-1/agm(1,sqrt(2)))",
+   "family": "gauss"
+  },
+  {
+   "id": "C9",
+   "value": "2.10265779084358409902265299663",
+   "answer_hidden": "6/(pi*sqrt(3)) + 1",
+   "family": "pi_sqrt3"
+  },
+  {
+   "id": "C10",
+   "value": "0.616775706662745003182820957341",
+   "answer_hidden": "log(5)/(1+log(5))",
+   "family": "log5"
+  }
+ ]
+}
