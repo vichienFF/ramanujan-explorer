@@ -1,0 +1,532 @@
+{
+ "plan": "PLAN_BATCH11_2026-10-07 (11D, exploratory)",
+ "control_rho": 15,
+ "n": 5244,
+ "best_k": 16,
+ "silhouette": 0.24279327512277743,
+ "silhouette_shuffled": 0.141539516662173,
+ "clusters": {
+  "C5": {
+   "cluster": 11,
+   "size": 213,
+   "composition": [
+    [
+     "conj13",
+     110
+    ],
+    [
+     "survivor",
+     77
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "euler",
+     9
+    ],
+    [
+     "C5",
+     1
+    ],
+    [
+     "C12",
+     1
+    ],
+    [
+     "C0",
+     1
+    ],
+    [
+     "C1",
+     1
+    ]
+   ]
+  },
+  "C12": {
+   "cluster": 11,
+   "size": 213,
+   "composition": [
+    [
+     "conj13",
+     110
+    ],
+    [
+     "survivor",
+     77
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "euler",
+     9
+    ],
+    [
+     "C5",
+     1
+    ],
+    [
+     "C12",
+     1
+    ],
+    [
+     "C0",
+     1
+    ],
+    [
+     "C1",
+     1
+    ]
+   ]
+  },
+  "C0": {
+   "cluster": 11,
+   "size": 213,
+   "composition": [
+    [
+     "conj13",
+     110
+    ],
+    [
+     "survivor",
+     77
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "euler",
+     9
+    ],
+    [
+     "C5",
+     1
+    ],
+    [
+     "C12",
+     1
+    ],
+    [
+     "C0",
+     1
+    ],
+    [
+     "C1",
+     1
+    ]
+   ]
+  },
+  "C1": {
+   "cluster": 11,
+   "size": 213,
+   "composition": [
+    [
+     "conj13",
+     110
+    ],
+    [
+     "survivor",
+     77
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "euler",
+     9
+    ],
+    [
+     "C5",
+     1
+    ],
+    [
+     "C12",
+     1
+    ],
+    [
+     "C0",
+     1
+    ],
+    [
+     "C1",
+     1
+    ]
+   ]
+  },
+  "C6": {
+   "cluster": 6,
+   "size": 180,
+   "composition": [
+    [
+     "conj13",
+     132
+    ],
+    [
+     "survivor",
+     34
+    ],
+    [
+     "euler",
+     7
+    ],
+    [
+     "rational_or_quadratic",
+     6
+    ],
+    [
+     "C6",
+     1
+    ]
+   ]
+  },
+  "C7": {
+   "cluster": 7,
+   "size": 254,
+   "composition": [
+    [
+     "conj13",
+     144
+    ],
+    [
+     "survivor",
+     73
+    ],
+    [
+     "euler",
+     21
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "C7",
+     1
+    ],
+    [
+     "C2",
+     1
+    ],
+    [
+     "C3",
+     1
+    ]
+   ]
+  },
+  "C2": {
+   "cluster": 7,
+   "size": 254,
+   "composition": [
+    [
+     "conj13",
+     144
+    ],
+    [
+     "survivor",
+     73
+    ],
+    [
+     "euler",
+     21
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "C7",
+     1
+    ],
+    [
+     "C2",
+     1
+    ],
+    [
+     "C3",
+     1
+    ]
+   ]
+  },
+  "C3": {
+   "cluster": 7,
+   "size": 254,
+   "composition": [
+    [
+     "conj13",
+     144
+    ],
+    [
+     "survivor",
+     73
+    ],
+    [
+     "euler",
+     21
+    ],
+    [
+     "rational_or_quadratic",
+     13
+    ],
+    [
+     "C7",
+     1
+    ],
+    [
+     "C2",
+     1
+    ],
+    [
+     "C3",
+     1
+    ]
+   ]
+  },
+  "C8": {
+   "cluster": 0,
+   "size": 347,
+   "composition": [
+    [
+     "deflates",
+     282
+    ],
+    [
+     "rational_or_quadratic",
+     40
+    ],
+    [
+     "conj13",
+     19
+    ],
+    [
+     "survivor",
+     4
+    ],
+    [
+     "euler",
+     1
+    ],
+    [
+     "C8",
+     1
+    ]
+   ]
+  },
+  "C13": {
+   "cluster": 3,
+   "size": 366,
+   "composition": [
+    [
+     "deflates",
+     325
+    ],
+    [
+     "rational_or_quadratic",
+     21
+    ],
+    [
+     "conj13",
+     10
+    ],
+    [
+     "survivor",
+     8
+    ],
+    [
+     "euler",
+     1
+    ],
+    [
+     "C13",
+     1
+    ]
+   ]
+  },
+  "C9": {
+   "cluster": 13,
+   "size": 497,
+   "composition": [
+    [
+     "deflates",
+     460
+    ],
+    [
+     "conj13",
+     23
+    ],
+    [
+     "rational_or_quadratic",
+     9
+    ],
+    [
+     "survivor",
+     2
+    ],
+    [
+     "euler",
+     2
+    ],
+    [
+     "C9",
+     1
+    ]
+   ]
+  },
+  "C10": {
+   "cluster": 12,
+   "size": 179,
+   "composition": [
+    [
+     "conj13",
+     91
+    ],
+    [
+     "survivor",
+     69
+    ],
+    [
+     "rational_or_quadratic",
+     8
+    ],
+    [
+     "euler",
+     7
+    ],
+    [
+     "C10",
+     1
+    ],
+    [
+     "C4",
+     1
+    ],
+    [
+     "C11",
+     1
+    ],
+    [
+     "C14",
+     1
+    ]
+   ]
+  },
+  "C4": {
+   "cluster": 12,
+   "size": 179,
+   "composition": [
+    [
+     "conj13",
+     91
+    ],
+    [
+     "survivor",
+     69
+    ],
+    [
+     "rational_or_quadratic",
+     8
+    ],
+    [
+     "euler",
+     7
+    ],
+    [
+     "C10",
+     1
+    ],
+    [
+     "C4",
+     1
+    ],
+    [
+     "C11",
+     1
+    ],
+    [
+     "C14",
+     1
+    ]
+   ]
+  },
+  "C11": {
+   "cluster": 12,
+   "size": 179,
+   "composition": [
+    [
+     "conj13",
+     91
+    ],
+    [
+     "survivor",
+     69
+    ],
+    [
+     "rational_or_quadratic",
+     8
+    ],
+    [
+     "euler",
+     7
+    ],
+    [
+     "C10",
+     1
+    ],
+    [
+     "C4",
+     1
+    ],
+    [
+     "C11",
+     1
+    ],
+    [
+     "C14",
+     1
+    ]
+   ]
+  },
+  "C14": {
+   "cluster": 12,
+   "size": 179,
+   "composition": [
+    [
+     "conj13",
+     91
+    ],
+    [
+     "survivor",
+     69
+    ],
+    [
+     "rational_or_quadratic",
+     8
+    ],
+    [
+     "euler",
+     7
+    ],
+    [
+     "C10",
+     1
+    ],
+    [
+     "C4",
+     1
+    ],
+    [
+     "C11",
+     1
+    ],
+    [
+     "C14",
+     1
+    ]
+   ]
+  }
+ }
+}

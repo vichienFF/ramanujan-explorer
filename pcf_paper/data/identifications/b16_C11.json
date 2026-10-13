@@ -1,0 +1,59 @@
+{
+ "job": "C11",
+ "attempts": [
+  {
+   "partner_a": [
+    -6,
+    1,
+    0
+   ],
+   "partner_b": [
+    -5,
+    11,
+    12
+   ],
+   "mobius_numeric": [
+    4,
+    -4,
+    8,
+    1
+   ],
+   "result": null
+  },
+  {
+   "partner_a": [
+    -3,
+    1,
+    0
+   ],
+   "partner_b": [
+    -1,
+    -1,
+    12
+   ],
+   "mobius_numeric": [
+    8,
+    -3,
+    4,
+    1
+   ],
+   "result": {
+    "s": 1,
+    "form": "row",
+    "lambda": "3*n + 1",
+    "U": [
+     [
+      "4*n**2 - 7*n/3 - 2/9",
+      "-12*n**3 + 9*n**2 + n/3 - 2/3"
+     ],
+     [
+      "-1/3",
+      "n + 1/9"
+     ]
+    ],
+    "detU": "10*(3*n - 2)*(3*n + 1)/81",
+    "identity_verified": true
+   }
+  }
+ ]
+}

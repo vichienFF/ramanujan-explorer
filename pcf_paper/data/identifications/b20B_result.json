@@ -1,0 +1,55 @@
+{
+ "n_records": 1065,
+ "names_unique": 1065,
+ "conj13": {
+  "wrapped": 168,
+  "negative": 123,
+  "slow_target": 9,
+  "decided": 291,
+  "frac_wrapped": 0.577,
+  "wilson95": [
+   0.52,
+   0.633
+  ]
+ },
+ "deflates": {
+  "wrapped": 195,
+  "negative": 105,
+  "decided": 300,
+  "frac_wrapped": 0.65,
+  "wilson95": [
+   0.594,
+   0.702
+  ]
+ },
+ "mismatch": {
+  "negative": 138,
+  "wrapped": 12,
+  "decided": 150,
+  "frac_wrapped": 0.08,
+  "wilson95": [
+   0.046,
+   0.135
+  ]
+ },
+ "slow_convergence": {
+  "slow_target": 13,
+  "negative": 2,
+  "decided": 2,
+  "frac_wrapped": 0.0,
+  "wilson95": [
+   0.0,
+   0.658
+  ]
+ },
+ "survivor": {
+  "wrapped": 40,
+  "negative": 260,
+  "decided": 300,
+  "frac_wrapped": 0.133,
+  "wilson95": [
+   0.099,
+   0.176
+  ]
+ }
+}

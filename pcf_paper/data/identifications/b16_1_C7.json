@@ -1,0 +1,60 @@
+{
+ "job": "C7",
+ "attempts": [
+  {
+   "partner_a": [
+    0,
+    2
+   ],
+   "partner_b": [
+    12,
+    44,
+    24
+   ],
+   "mobius_numeric": [
+    0,
+    -3,
+    5,
+    -1
+   ],
+   "result": null
+  },
+  {
+   "partner_a": [
+    0,
+    4
+   ],
+   "partner_b": [
+    48,
+    176,
+    96
+   ],
+   "mobius_numeric": [
+    0,
+    -6,
+    5,
+    -1
+   ],
+   "result": null
+  },
+  {
+   "partner_a": [
+    0,
+    2,
+    0
+   ],
+   "partner_b": [
+    12,
+    44,
+    24
+   ],
+   "mobius_numeric": [
+    0,
+    -3,
+    5,
+    -1
+   ],
+   "result": null
+  }
+ ]
+}
