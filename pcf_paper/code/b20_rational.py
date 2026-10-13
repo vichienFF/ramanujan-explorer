@@ -18,7 +18,7 @@ n = sp.Symbol("n"); H = os.path.dirname(os.path.abspath(__file__)); DMAX = int(o
 KAPS = {Fraction(k) for k in (1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 27, 36)}
 if os.environ.get("KAPS_RATIO"):        # Amendment 20-1: kappa = ratio of two list values (partner normalisation)
     KAPS = {Fraction(a, b) for a in KAPS for b in KAPS}
-SHIFTS = range(-3, 4)
+SHIFTS = range(-int(os.environ.get("SHIFT_MAX", "3")), int(os.environ.get("SHIFT_MAX", "3")) + 1)   # Batch 21: SHIFT_MAX=6
 
 def M(a, b, m): return sp.Matrix([[0, b.subs(n, m)], [1, a.subs(n, m)]])
 def poly(c): return sp.expand(sum(sp.Integer(v) * n ** k for k, v in enumerate(c)))
@@ -133,7 +133,8 @@ def cand(i):
 PARTNERS = {"C1": [([-1, 2], [105, -88, 15])],
             "C5": [([-3, 6], [36, -144, 135]), ([-6, 12], [144, -576, 540])],
             "C7": [([0, 2], [12, 44, 24]), ([0, 4], [48, 176, 96])],
-            "C14": [([8, 2], [-28, -92, 80])]}
+            "C14": [([8, 2], [-28, -92, 80])],
+            "C2": [([-8, 2], [-16, -8, 48]), ([-9, 1], [-22, -38, 12]), ([-16, 4], [-64, -32, 192])]}   # Batch 21B partners
 
 if __name__ == "__main__":
     job = sys.argv[1]; out = os.environ.get("OUT", os.path.join(H, f"b20{os.environ.get('TAG', '')}_{job}.jsonl"))

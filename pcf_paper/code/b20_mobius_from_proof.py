@@ -7,10 +7,12 @@ n = sp.Symbol("n"); C = json.load(open("bf_runs/track_a/irreducible15.json"))
 P = lambda c: sum(sp.Integer(v) * n ** k for k, v in enumerate(c))
 Mx = lambda a, b, m: sp.Matrix([[0, b.subs(n, m)], [1, a.subs(n, m)]])
 rows = []
-for f in ("b20_C1.jsonl", "b20_a201_C5.jsonl", "b20_a201_C7.jsonl", "b20_a201_C14.jsonl", "b20_a201_control.jsonl"):
+import sys
+FILES = sys.argv[1:] or ["b20_C1.jsonl", "b20_a201_C5.jsonl", "b20_a201_C7.jsonl", "b20_a201_C14.jsonl", "b20_a201_control.jsonl"]
+for f in FILES:
     for l in open(f):
         r = json.loads(l)
-        if r.get("proof") and r["job"] in ("C1", "C5", "C7", "C14", "pos1_C0"): rows.append(r)
+        if r.get("proof") and r["job"] in ("C1", "C2", "C5", "C7", "C14", "pos1_C0"): rows.append(r)
 mp.mp.dps = 80
 for r in rows:
     i = 0 if r["job"] == "pos1_C0" else int(r["job"][1:]); a1, b1 = P(C[i]["a"]), P(C[i]["b"]); a2, b2 = P(r["partner"][0]), P(r["partner"][1]); s = r["s"]

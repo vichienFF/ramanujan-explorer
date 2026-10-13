@@ -1,13 +1,13 @@
-# Polynomial continued fractions with factorial reduction: seven hidden low-degree equivalences with proofs, a staged identification pipeline, and eight unidentified candidates
+# Polynomial continued fractions with factorial reduction: eight hidden low-degree equivalences with proofs, a staged identification pipeline, and seven unidentified candidates
 
 Vichien Fugsukjit, Independent researcher, Bangkok, Thailand (9chienvi9@gmail.com)
 
-Code and data for the preprint `paper/pcf_paper_v3.pdf` (earlier drafts kept: `paper/pcf_paper_v2.pdf`, `paper/pcf_paper_draft.pdf`).
-Of fifteen factorial-reduction PCFs with irreducible order-4 operators (labels C0-C14), SEVEN are Mobius transforms of
-degree-(1,2) PCFs (ratios of Gauss 2F1 functions), verified to 170+ digits, and ALL SEVEN are PROVEN by coboundaries
+Code and data for the preprint `paper/pcf_paper_v4.pdf` (earlier versions kept: v3 = Zenodo DOI 10.5281/zenodo.23337496, v2, draft).
+Of fifteen factorial-reduction PCFs with irreducible order-4 operators (labels C0-C14), EIGHT are Mobius transforms of
+degree-(1,2) PCFs (ratios of Gauss 2F1 functions), verified to 170+ digits, and ALL EIGHT are PROVEN by coboundaries
 M1(n) V(n) = lambda(n) V(n-1) M2(n-s) (C0, C10, C11: `data/identifications/b16_C*.json`; C1, C5, C7, C14:
-`data/identifications/b20/`, re-checked by `code/b20_independent_check.py`; the exact Mobius maps follow from
-`code/b20_mobius_from_proof.py`). The remaining EIGHT (C2, C3, C4, C6, C8, C9, C12, C13) are
+`data/identifications/b20/`; C2: `data/identifications/b21/b20_b21_C2.jsonl`; all re-checked by `code/b20_independent_check.py`; the exact Mobius maps follow from
+`code/b20_mobius_from_proof.py`). The remaining SEVEN (C3, C4, C6, C8, C9, C12, C13) are
 released as well-tested candidates, not as new constants (see Limitations in the paper).
 
 The original candidate list `data/irreducible15.json` was time-stamped before disclosure: its SHA-256
@@ -41,6 +41,7 @@ Full factorial reduction (FR): S_N = (1/N) log(|Q_N| / gcd(P_N, Q_N)) bounded; n
 | Coboundary proofs (Batch 16) | b16_coboundary.py, b19_twostep.py (two-step ansatz; its control failed) | data/identifications/b16_*.json |
 | Rational-lambda prover, proofs of C1, C5, C7, C14 (Batch 20A, Amendment 20-1) | b20_rational.py, b20_independent_check.py, b20_mobius_from_proof.py | data/identifications/b20/*.jsonl |
 | C12 wide-filter rerun (Amendment 18-2) | b18_mechanism.py | data/identifications/b20/b18A_c12c5_r2.jsonl |
+| Mechanism-guided filter: C2 identified and proven; C12 band test (Batch 21) | b21b_mechanism.py, b21b_make_targets.py, b21B_analyze.py, b21a_band.py | data/identifications/b21/ (kaggle_res_*.jsonl = Kaggle sub-unit results) |
 | Prevalence sample, exploratory (Batch 20B; mismatch control above its limit) | b20b_mechanism.py, b20B_analyze.py | data/identifications/b20B_result.json |
 | Deformation, monodromy, modular L-values, clustering (Batches 10-11) | b10b_deform.py, b10b1_deform.py, sage_monodromy.sage, b11a_modular.py, b11d_ecosystem.py | data/identifications/b10b*_result.json, b11d_result.json, monodromy11b.json |
 | Staged pipeline | identify_pipeline.py | - |
@@ -50,7 +51,7 @@ Python 3.10+ with numpy, mpmath, sympy; ramanujantools 0.0.8 (deflation, CMF); S
 The brute-force and CMF runs used Kaggle CPU notebooks (no internet, no secrets).
 
 ## Rebuild the paper
-`cd paper && python make_v3.py && pdflatex pcf_paper_v3.tex` (twice; needs the lmodern fonts; v3 is generated from v2). v1: `python make_paper.py && pdflatex pcf_paper_draft.tex`.
+`cd paper && python make_v3.py && python make_v4.py && pdflatex pcf_paper_v4.tex` (twice; needs the lmodern fonts; v4 is generated from v3, v3 from v2). v1: `python make_paper.py && pdflatex pcf_paper_draft.tex`.
 
 ## Licences
 Code: MIT (`LICENSE`). Data and paper: CC BY 4.0 (`LICENSE-DATA`).
