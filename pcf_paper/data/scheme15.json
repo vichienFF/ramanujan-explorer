@@ -1,0 +1,317 @@
+[
+{
+"i": 0,
+"a": [
+-3,
+10,
+4
+],
+"b": [
+24,
+38,
+-69,
+-68,
+60
+],
+"scheme": {
+"z - 1/10": "(20) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 39/20)",
+"z + 1/6": "(12) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 11/12)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-60) * (alpha + 1/2) * (alpha + 6/5) * (alpha + 5/2) * (alpha + 8/3)"
+}
+},
+{
+"i": 1,
+"a": [
+-3,
+10,
+4
+],
+"b": [
+-120,
+-278,
+3,
+188,
+60
+],
+"scheme": {
+"z - 1/10": "(20) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 71/20)",
+"z + 1/6": "(12) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 43/12)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-60) * (alpha + 4/5) * (alpha + 5/2) * (alpha + 10/3) * (alpha + 9/2)"
+}
+},
+{
+"i": 2,
+"a": [
+8,
+8,
+3
+],
+"b": [
+96,
+532,
+906,
+558,
+108
+],
+"scheme": {
+"z - 1/12": "(42) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 187/42)",
+"z + 1/9": "(7) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 33/7)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-108) * (alpha + 7/3) * (alpha + 8/3) * (alpha + 7/2) * (alpha + 14/3)"
+}
+},
+{
+"i": 3,
+"a": [
+8,
+8,
+3
+],
+"b": [
+-144,
+42,
+884,
+798,
+180
+],
+"scheme": {
+"z - 1/15": "(45) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 187/45)",
+"z + 1/12": "(18) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 77/18)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-180) * (alpha + 5/3) * (alpha + 13/5) * (alpha + 7/2) * (alpha + 14/3)"
+}
+},
+{
+"i": 4,
+"a": [
+2,
+-2,
+3
+],
+"b": [
+256,
+-1152,
+1724,
+-978,
+180
+],
+"scheme": {
+"z - 1/15": "(5) * (alpha - 2) * (alpha - 1) * (alpha - 3/5) * alpha",
+"z + 1/12": "(6) * (alpha - 2) * (alpha - 1) * (alpha - 5/6) * alpha",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-180) * (alpha - 2/3) * (alpha + 2/5) * (alpha + 4/3) * (alpha + 3/2)"
+}
+},
+{
+"i": 5,
+"a": [
+-3,
+10,
+4
+],
+"b": [
+-45,
+-222,
+-269,
+-4,
+60
+],
+"scheme": {
+"z - 1/10": "(20) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 47/20)",
+"z + 1/6": "(12) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 19/12)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-60) * (alpha - 1/2) * (alpha + 7/3) * (alpha + 13/5) * (alpha + 7/2)"
+}
+},
+{
+"i": 6,
+"a": [
+1,
+9,
+4
+],
+"b": [
+189,
+1128,
+1724,
+992,
+192
+],
+"scheme": {
+"z - 1/16": "(28) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 123/28)",
+"z + 1/12": "(84) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 401/84)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-192) * (alpha + 9/4) * (alpha + 19/6) * (alpha + 7/2) * (alpha + 17/4)"
+}
+},
+{
+"i": 7,
+"a": [
+8,
+8,
+3
+],
+"b": [
+10,
+-19,
+-60,
+63,
+54
+],
+"scheme": {
+"z - 1/9": "(5) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 14/5)",
+"z + 1/6": "(30) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 71/30)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-54) * (alpha + 4/3) * (alpha + 5/3) * (alpha + 5/2) * (alpha + 11/3)"
+}
+},
+{
+"i": 8,
+"a": [
+5,
+13,
+6
+],
+"b": [
+280,
+1002,
+1106,
+480,
+72
+],
+"scheme": {
+"z - 1/12": "(18) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 83/18)",
+"z + 1/6": "(18) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 109/18)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-72) * (alpha + 5/2) * (alpha + 10/3) * (alpha + 13/3) * (alpha + 9/2)"
+}
+},
+{
+"i": 9,
+"a": [
+5,
+13,
+6
+],
+"b": [
+1200,
+1100,
+-1608,
+-99,
+135
+],
+"scheme": {
+"z - 1/15": "(60) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 121/60)",
+"z + 1/9": "(4) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 5/4)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-135) * (alpha - 4/3) * (alpha + 2/3) * (alpha + 13/5) * (alpha + 16/3)"
+}
+},
+{
+"i": 10,
+"a": [
+2,
+-2,
+3
+],
+"b": [
+-8,
+46,
+-69,
+-9,
+54
+],
+"scheme": {
+"z - 1/9": "(5) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 8/5)",
+"z + 1/6": "(30) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 67/30)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-54) * (alpha + 4/3) * (alpha + 3/2) * (alpha + 5/3) * (alpha + 10/3)"
+}
+},
+{
+"i": 11,
+"a": [
+2,
+-2,
+3
+],
+"b": [
+-60,
+-19,
+348,
+-369,
+108
+],
+"scheme": {
+"z - 1/12": "(84) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 25/84)",
+"z + 1/9": "(7) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 2/7)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-108) * (alpha + 1/3) * (alpha + 2/3) * (alpha + 5/4) * (alpha + 7/3)"
+}
+},
+{
+"i": 12,
+"a": [
+-3,
+10,
+4
+],
+"b": [
+675,
+210,
+-397,
+-68,
+60
+],
+"scheme": {
+"z - 1/10": "(20) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 39/20)",
+"z + 1/6": "(12) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 11/12)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-60) * (alpha - 1/2) * (alpha + 1/5) * (alpha + 7/2) * (alpha + 11/3)"
+}
+},
+{
+"i": 13,
+"a": [
+5,
+13,
+6
+],
+"b": [
+-2160,
+-2874,
+656,
+984,
+160
+],
+"scheme": {
+"z - 1/16": "(52) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 241/52)",
+"z + 1/10": "(130) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 717/130)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-160) * (alpha + 2/5) * (alpha + 11/4) * (alpha + 9/2) * (alpha + 13/2)"
+}
+},
+{
+"i": 14,
+"a": [
+2,
+-2,
+3
+],
+"b": [
+-280,
+818,
+-145,
+-447,
+180
+],
+"scheme": {
+"z - 1/15": "(45) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 32/45)",
+"z + 1/12": "(36) * (alpha - 2) * (alpha - 1) * alpha * (alpha + 29/36)",
+"z": "(alpha - 1)^2 * alpha^2",
+"inf": "(-180) * (alpha + 1/4) * (alpha + 1/3) * (alpha + 8/5) * (alpha + 10/3)"
+}
+}
+]

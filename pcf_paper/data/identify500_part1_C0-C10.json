@@ -1,0 +1,107 @@
+[
+{
+"name": "F1",
+"rho": "-11/3",
+"nbasis": 7,
+"CPabs": {
+"coef_logC": -3,
+"terms": {
+"log 2": 12,
+"log 3": -20,
+"log 5": 3
+}
+},
+"CQabs": null
+},
+{
+"name": "G1",
+"rho": "-8/3",
+"nbasis": 7,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "G2",
+"rho": "-7/3",
+"nbasis": 7,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C0",
+"rho": "-39/20",
+"nbasis": 21,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C1",
+"rho": "-71/20",
+"nbasis": 21,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C2",
+"rho": "-187/42",
+"nbasis": 17,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C3",
+"rho": "-187/45",
+"nbasis": 28,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C4",
+"rho": "3/5",
+"nbasis": 13,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C5",
+"rho": "-47/20",
+"nbasis": 21,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C6",
+"rho": "-123/28",
+"nbasis": 29,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C7",
+"rho": "-14/5",
+"nbasis": 13,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C8",
+"rho": "-83/18",
+"nbasis": 11,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C9",
+"rho": "-121/60",
+"nbasis": 21,
+"CPabs": null,
+"CQabs": null
+},
+{
+"name": "C10",
+"rho": "-8/5",
+"nbasis": 13,
+"CPabs": null,
+"CQabs": null
+}
+]

@@ -1,0 +1,2486 @@
+{
+ "units": 12194,
+ "cf_total": 1569367800,
+ "cf_converged": 445234872,
+ "hits_all": 1219,
+ "status": {
+  "HIT": 1143,
+  "SLOW": 76
+ },
+ "periodic_trivial": 0,
+ "hits_by_const": {
+  "phi": 194,
+  "log2": 100,
+  "lemniscate": 115,
+  "sqrt2": 104,
+  "pi": 246,
+  "gauss": 118,
+  "sqrt3": 155,
+  "log3": 54,
+  "log5": 4,
+  "catalan": 17,
+  "zeta2": 15,
+  "pi_sqrt3": 16,
+  "li2_13": 3,
+  "L2_chi3": 1,
+  "log2_sq": 1
+ },
+ "float_coincidence": 1876,
+ "examples": {
+  "phi": [
+   {
+    "a": [
+     1,
+     2,
+     1
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     2,
+     1
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     3,
+     1
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     4,
+     1
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     6,
+     5,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     6,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     -1,
+     -2,
+     -1
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     -1,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     3,
+     2
+    ],
+    "b": [
+     0,
+     -1,
+     -1,
+     4,
+     4
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     1,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     3,
+     1
+    ],
+    "b": [
+     0,
+     2,
+     5,
+     4,
+     1
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     2,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -1,
+     1,
+     2
+    ],
+    "b": [
+     0,
+     3,
+     -5,
+     -4,
+     4
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     -1,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     8,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     2,
+     1
+    ],
+    "const": "phi",
+    "mobius": [
+     -1,
+     -1,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     4,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     4,
+     8,
+     4
+    ],
+    "const": "phi",
+    "mobius": [
+     0,
+     2,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "log2": [
+   {
+    "a": [
+     2,
+     5,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -2,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     6,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -2,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     -1,
+     0,
+     1,
+     -2
+    ],
+    "conv_digits": 58,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -4,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     2,
+     0,
+     1,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -2,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     -2,
+     0,
+     5,
+     -8
+    ],
+    "conv_digits": 58,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     9,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -1,
+     -1
+    ],
+    "const": "log2",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -6,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     6,
+     0,
+     5,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     -2,
+     -4,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     1,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 58,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     9,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -6,
+     -2
+    ],
+    "const": "log2",
+    "mobius": [
+     -6,
+     0,
+     1,
+     -4
+    ],
+    "conv_digits": 58,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "lemniscate": [
+   {
+    "a": [
+     1,
+     5,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     -1,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     5,
+     4
+    ],
+    "b": [
+     0,
+     3,
+     4,
+     -1,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     4,
+     1,
+     2,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     9,
+     4
+    ],
+    "b": [
+     0,
+     2,
+     -1,
+     -5,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     0,
+     6,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     2,
+     -6,
+     -8
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     -6,
+     0,
+     2,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     5,
+     9,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -3,
+     -5,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     6,
+     0,
+     4,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     5,
+     9,
+     4
+    ],
+    "b": [
+     0,
+     2,
+     -1,
+     -5,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     2,
+     1,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     6,
+     8
+    ],
+    "b": [
+     0,
+     -1,
+     2,
+     4,
+     -8
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 99,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     5,
+     9,
+     4
+    ],
+    "b": [
+     0,
+     -1,
+     -4,
+     -5,
+     -2
+    ],
+    "const": "lemniscate",
+    "mobius": [
+     0,
+     -1,
+     2,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "sqrt2": [
+   {
+    "a": [
+     2,
+     4,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     2,
+     1
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -1,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     6,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     4,
+     1
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     3,
+     3,
+     3,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     4
+    ],
+    "b": [
+     0,
+     -1,
+     -1,
+     4,
+     4
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -1,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     6,
+     2
+    ],
+    "b": [
+     0,
+     2,
+     5,
+     4,
+     1
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -2,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -2,
+     2,
+     4
+    ],
+    "b": [
+     0,
+     3,
+     -5,
+     -4,
+     4
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -1,
+     -1,
+     1,
+     0
+    ],
+    "conv_digits": 60,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     8,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -2,
+     -4,
+     -2
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     0,
+     -1,
+     1,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     6,
+     12,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     -1,
+     -2,
+     -1
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -1,
+     -1,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     8,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     4,
+     8,
+     4
+    ],
+    "const": "sqrt2",
+    "mobius": [
+     -2,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "pi": [
+   {
+    "a": [
+     1,
+     3,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     1,
+     1
+    ],
+    "const": "pi",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     0,
+     3,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     1,
+     -2
+    ],
+    "const": "pi",
+    "mobius": [
+     2,
+     0,
+     2,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -1,
+     2,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     1,
+     -2
+    ],
+    "const": "pi",
+    "mobius": [
+     -2,
+     0,
+     4,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     4,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     -1,
+     -2
+    ],
+    "const": "pi",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     4,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     1,
+     -2
+    ],
+    "const": "pi",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     4,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -1,
+     0,
+     4
+    ],
+    "const": "pi",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     5,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     -1,
+     -2
+    ],
+    "const": "pi",
+    "mobius": [
+     -2,
+     0,
+     2,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     5,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     2,
+     3,
+     1
+    ],
+    "const": "pi",
+    "mobius": [
+     8,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "gauss": [
+   {
+    "a": [
+     -1,
+     3,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     1,
+     -2
+    ],
+    "const": "gauss",
+    "mobius": [
+     0,
+     -2,
+     1,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -1,
+     -3,
+     -2
+    ],
+    "const": "gauss",
+    "mobius": [
+     0,
+     -2,
+     1,
+     -2
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     4
+    ],
+    "b": [
+     0,
+     1,
+     0,
+     -3,
+     -2
+    ],
+    "const": "gauss",
+    "mobius": [
+     1,
+     2,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     0,
+     6,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     6,
+     -2,
+     -8
+    ],
+    "const": "gauss",
+    "mobius": [
+     0,
+     -2,
+     1,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -2,
+     7,
+     4
+    ],
+    "b": [
+     0,
+     6,
+     5,
+     -3,
+     -2
+    ],
+    "const": "gauss",
+    "mobius": [
+     0,
+     -4,
+     1,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     4
+    ],
+    "b": [
+     0,
+     6,
+     5,
+     -3,
+     -2
+    ],
+    "const": "gauss",
+    "mobius": [
+     3,
+     4,
+     1,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     8,
+     6
+    ],
+    "b": [
+     0,
+     -1,
+     5,
+     -2,
+     -8
+    ],
+    "const": "gauss",
+    "mobius": [
+     -1,
+     0,
+     1,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     8,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     6,
+     -2,
+     -8
+    ],
+    "const": "gauss",
+    "mobius": [
+     0,
+     2,
+     1,
+     0
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "sqrt3": [
+   {
+    "a": [
+     2,
+     4,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     2,
+     4,
+     2
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     8,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -1,
+     -2,
+     -1
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -1,
+     -1,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     7,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     -3,
+     -6
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -1,
+     0,
+     1,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     6,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     6,
+     8,
+     2
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -6,
+     0,
+     4,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     0,
+     5,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     9,
+     3,
+     -6
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -3,
+     0,
+     1,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     8,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     3,
+     -3,
+     -6
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -3,
+     0,
+     4,
+     -3
+    ],
+    "conv_digits": 58,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     6,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     9,
+     3,
+     -6
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -5,
+     0,
+     2,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     8,
+     12,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -3,
+     -4,
+     -1
+    ],
+    "const": "sqrt3",
+    "mobius": [
+     -6,
+     -3,
+     2,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "log3": [
+   {
+    "a": [
+     2,
+     6,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -1,
+     -1
+    ],
+    "const": "log3",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     8,
+     8
+    ],
+    "b": [
+     0,
+     0,
+     1,
+     0,
+     -4
+    ],
+    "const": "log3",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     10,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -2,
+     -3,
+     -1
+    ],
+    "const": "log3",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -2,
+     0,
+     8
+    ],
+    "b": [
+     0,
+     0,
+     -3,
+     8,
+     -4
+    ],
+    "const": "log3",
+    "mobius": [
+     -2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     6,
+     10,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -2,
+     -3,
+     -1
+    ],
+    "const": "log3",
+    "mobius": [
+     4,
+     0,
+     4,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     6,
+     10,
+     4
+    ],
+    "b": [
+     0,
+     -1,
+     -3,
+     -3,
+     -1
+    ],
+    "const": "log3",
+    "mobius": [
+     0,
+     -1,
+     2,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     8,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -6,
+     -6
+    ],
+    "const": "log3",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     4,
+     9,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -6,
+     -6
+    ],
+    "const": "log3",
+    "mobius": [
+     -4,
+     0,
+     2,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "log5": [
+   {
+    "a": [
+     3,
+     9,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -4,
+     -4
+    ],
+    "const": "log5",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     12,
+     12
+    ],
+    "b": [
+     0,
+     0,
+     4,
+     0,
+     -16
+    ],
+    "const": "log5",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -3,
+     0,
+     12
+    ],
+    "b": [
+     0,
+     0,
+     -12,
+     32,
+     -16
+    ],
+    "const": "log5",
+    "mobius": [
+     -4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -9,
+     12,
+     12
+    ],
+    "b": [
+     -12,
+     8,
+     36,
+     0,
+     -16
+    ],
+    "const": "log5",
+    "mobius": [
+     0,
+     4,
+     4,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "catalan": [
+   {
+    "a": [
+     1,
+     3,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -2
+    ],
+    "const": "catalan",
+    "mobius": [
+     1,
+     0,
+     0,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     3,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -2,
+     -2
+    ],
+    "const": "catalan",
+    "mobius": [
+     -2,
+     0,
+     1,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -4,
+     -2
+    ],
+    "const": "catalan",
+    "mobius": [
+     -2,
+     0,
+     1,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -8
+    ],
+    "const": "catalan",
+    "mobius": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     -4,
+     -6,
+     -2
+    ],
+    "const": "catalan",
+    "mobius": [
+     4,
+     0,
+     1,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -8,
+     -8
+    ],
+    "const": "catalan",
+    "mobius": [
+     -4,
+     0,
+     1,
+     -2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     7,
+     9,
+     3
+    ],
+    "b": [
+     0,
+     -2,
+     -6,
+     -6,
+     -2
+    ],
+    "const": "catalan",
+    "mobius": [
+     1,
+     0,
+     2,
+     -2
+    ],
+    "conv_digits": 58,
+    "agree_digits": 58,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     9,
+     9
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -18
+    ],
+    "const": "catalan",
+    "mobius": [
+     3,
+     0,
+     0,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "zeta2": [
+   {
+    "a": [
+     1,
+     3,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     1,
+     -2
+    ],
+    "const": "zeta2",
+    "mobius": [
+     4,
+     0,
+     0,
+     3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     1,
+     3,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     3,
+     -2
+    ],
+    "const": "zeta2",
+    "mobius": [
+     8,
+     0,
+     2,
+     3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     5,
+     10,
+     0
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "const": "zeta2",
+    "mobius": [
+     -8,
+     0,
+     5,
+     -4
+    ],
+    "conv_digits": 30,
+    "agree_digits": 33,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     2,
+     -4
+    ],
+    "const": "zeta2",
+    "mobius": [
+     3,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 61,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     7,
+     3
+    ],
+    "b": [
+     0,
+     0,
+     2,
+     -3,
+     -2
+    ],
+    "const": "zeta2",
+    "mobius": [
+     -8,
+     0,
+     2,
+     -3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     7,
+     7
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     8
+    ],
+    "const": "zeta2",
+    "mobius": [
+     4,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     6,
+     6
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     4,
+     -8
+    ],
+    "const": "zeta2",
+    "mobius": [
+     8,
+     0,
+     0,
+     3
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     3,
+     11,
+     11
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "const": "zeta2",
+    "mobius": [
+     5,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "pi_sqrt3": [
+   {
+    "a": [
+     5,
+     7,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     3,
+     3
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     3,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     6,
+     11,
+     5
+    ],
+    "b": [
+     0,
+     0,
+     -2,
+     -6,
+     -4
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     3,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     5,
+     12,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     -3,
+     0,
+     12
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     3,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     10,
+     9,
+     2
+    ],
+    "b": [
+     0,
+     0,
+     6,
+     9,
+     3
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     6,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -2,
+     5,
+     7
+    ],
+    "b": [
+     0,
+     0,
+     18,
+     6,
+     -12
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     -3,
+     0,
+     6,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     10,
+     14,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     12,
+     12
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     6,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     -5,
+     8,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     9,
+     -24,
+     12
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     -3,
+     0,
+     6,
+     -1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     2,
+     12,
+     7
+    ],
+    "b": [
+     0,
+     0,
+     12,
+     -18,
+     -12
+    ],
+    "const": "pi_sqrt3",
+    "mobius": [
+     6,
+     0,
+     3,
+     2
+    ],
+    "conv_digits": 59,
+    "agree_digits": 60,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "li2_13": [
+   {
+    "a": [
+     3,
+     6,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -3
+    ],
+    "const": "li2_13",
+    "mobius": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     9,
+     12,
+     4
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -6,
+     -3
+    ],
+    "const": "li2_13",
+    "mobius": [
+     -4,
+     0,
+     1,
+     -4
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   },
+   {
+    "a": [
+     6,
+     12,
+     8
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -12
+    ],
+    "const": "li2_13",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "L2_chi3": [
+   {
+    "a": [
+     3,
+     10,
+     10
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     0,
+     -9
+    ],
+    "const": "L2_chi3",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 59,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ],
+  "log2_sq": [
+   {
+    "a": [
+     4,
+     12,
+     7
+    ],
+    "b": [
+     0,
+     0,
+     0,
+     -4,
+     8
+    ],
+    "const": "log2_sq",
+    "mobius": [
+     2,
+     0,
+     0,
+     1
+    ],
+    "conv_digits": 60,
+    "agree_digits": 59,
+    "status": "HIT",
+    "periodic_trivial": false
+   }
+  ]
+ }
+}
