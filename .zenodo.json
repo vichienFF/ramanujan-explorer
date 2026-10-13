@@ -1,0 +1,12 @@
+{
+  "title": "Polynomial continued fractions with factorial reduction: seven hidden low-degree equivalences with proofs, a staged identification pipeline, and eight unidentified candidates",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Preprint (pcf_paper/paper/pcf_paper_v3.pdf) with code and data. Of fifteen factorial-reduction polynomial continued fractions with irreducible order-4 operators, seven are proven (by coboundaries) to be Mobius transforms of degree-(1,2) PCFs, i.e. ratios of Gauss 2F1 functions; eight remain unidentified and are released as well-tested candidates, not as new constants. All experiments were pre-registered in this repository before they were run.",
+  "creators": [
+    {"name": "Fugsukjit, Vichien", "affiliation": "Independent researcher, Bangkok, Thailand"}
+  ],
+  "license": "cc-by-4.0",
+  "keywords": ["polynomial continued fractions", "factorial reduction", "Ramanujan Machine", "hypergeometric functions", "experimental mathematics", "coboundary"],
+  "access_right": "open"
+}
