@@ -1,4 +1,8 @@
-# Large gaps in dilates of Bose / Singer sets and the excess h(N) - sqrt(N) (Erdos problem #30, Guy C9)
+# Large gaps in dilates of Bose / Singer sets and the excess h(N) - sqrt(N) (Guy C9; related to Erdos problem #30)
+
+Note on the problem: Guy C9 / Erdos (USD 500) asks whether h(N) = sqrt(N) + O(1). erdosproblems.com #30 (USD 1000) asks the weaker
+question h(N) = sqrt(N) + O(N^eps). The evidence here concerns the O(1) question only. Section-3 material (Singer moments, 2026-10-15)
+is in the subfolder addendum_2026-10-15/.
 
 Vichien Fugsukjit, Independent researcher, Bangkok (9chienvi9@gmail.com). Numerical evidence, NOT a proof.
 All experiments were pre-registered in this repository before they were run (plans/ and the repository root).
