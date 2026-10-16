@@ -1,0 +1,12 @@
+B1 singer 17 null 51 errors 0
+controls: forbidden=0 all Singer True ; null>0 True
+control D_all exponent (B1) -0.500 -> OK
+T-a slope log D_mid vs log q (35 q): -0.504 (se 0.098) -> PASS
+T-b max sqrt(q)*D_mid over B1: 1.55 (median 1.23) -> PASS
+  T-c C=2: C*M=-1.468 band [-1.592,-1.308] PASS
+  T-c C=3: C*M=-1.466 band [-1.591,-1.309] PASS
+  T-c C=4: C*M=-1.460 band [-1.589,-1.311] PASS
+  T-c C=5: C*M=-1.460 band [-1.587,-1.313] PASS
+  T-c C=8: C*M=-1.459 band [-1.581,-1.319] PASS
+T-c: PASS (5/5)
+desc null D_mid slope (B1): -0.721

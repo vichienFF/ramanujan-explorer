@@ -1,0 +1,15 @@
+# Lane B ledger (LANE_B_PLAN_2026-10-15). One line per sealed output: date, kernel, files, SHA-256, status (SEALED / OPENED by plan <commit>).
+- 2026-10-15 | rama-lb2-bose-a | res_0.jsonl | b7d590542561f37d183aa896f1f4b79f15e3394976955a172fadc52011a23d9e | SEALED
+- 2026-10-15 | rama-lb2-bose-a | res_1.jsonl | 585c6b5502d00fded4d1b2b01faf6f364ae4f87e564527757755913a3bc53bf6 | SEALED
+- 2026-10-15 | rama-lb2-bose-a | res_2.jsonl | f38128a5899f51c4c94ab27ab7a95c17548b7268b5c3dd77c1366986a1ff65b7 | SEALED
+- 2026-10-15 | rama-lb2-bose-a | res_3.jsonl | 1910dc65b539bb9d4a6350cdfb47ec0dbf38dc5dcf29d2bf4a7ee43319d94734 | SEALED
+- 2026-10-15 | rama-lb2-bose-b | res_4.jsonl | fa83ed3ba17bcbf3934e527a71fee8f6350507031d0f37357f062d8dd67a7b21 | SEALED
+- 2026-10-15 | rama-lb2-bose-b | res_5.jsonl | 15f90cb52473144d9b45aa064a9b4a55a55ef64247fb05391bd4b2191be68b24 | SEALED
+- 2026-10-15 | rama-lb2-bose-b | res_6.jsonl | 6e2b9761d8ae33ca64a5fdba193315d2e1af4725bca59e407f96496c6b57ca51 | SEALED
+- 2026-10-15 | rama-lb2-bose-b | res_7.jsonl | 23646d57b7383f2acc241af3a10a22bad03d3aca6f4da53677e76c8094697632 | SEALED
+- 2026-10-15 | rama-lb1-singer | res_0.jsonl | b36d663dbf49d3ef647ded71bd561b1a429294fa4fecae9ac134b0877dc13773 | SEALED
+- 2026-10-15 | rama-lb1-singer | res_1.jsonl | 0e1bd4a1eb66423412ec25812addd002b9db96f0dd0f92e9bae0f4c7abafc3d0 | SEALED
+- 2026-10-15 | rama-lb1-singer | res_2.jsonl | e583c2d103d1c0574f4d53d30c64909dd3a8ee9fb0f52c69d33f393bd37c81d0 | SEALED
+- 2026-10-15 | rama-lb1-singer | res_3.jsonl | f6e9547b12ccff1c9ae341981f7d5004c121cc49902a92272eb7670a84b6f2aa | SEALED
+- 2026-10-15 | FROZEN plan FROZEN_B1_DMID_2026-10-15.md sha256 0143ae4bc1df5915df2f8cc821c997c680925b9831b3e239ffa8e71b99983d0c recorded BEFORE opening rama-lb1-singer
+- 2026-10-15 | rama-lb1-singer | all files | OPENED under FROZEN_B1_DMID_2026-10-15.md (sha 0143ae4b...) | result lane_b/B1_DMID_result.log

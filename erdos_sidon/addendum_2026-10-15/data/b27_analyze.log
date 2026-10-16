@@ -1,0 +1,10 @@
+rows 76 errors 0
+controls: blind q present True (19 singer, 54 null); forbidden=0 all Singer True; null >0 True; q41 max diff 8.9e-16 -> VALID
+T1 C=2: M=-0.7256 (C*M=-1.451) band [-0.8288,-0.6212] PASS | null sd 0.111 | desc |CM+1.5|=0.049 |CM+1.17|=0.281 | singer sd 0.162
+T1 C=3: M=-0.4792 (C*M=-1.438) band [-0.5510,-0.4156] PASS | null sd 0.072 | desc |CM+1.5|=0.062 |CM+1.17|=0.268 | singer sd 0.104
+T1 C=4: M=-0.3574 (C*M=-1.430) band [-0.4125,-0.3125] PASS | null sd 0.053 | desc |CM+1.5|=0.070 |CM+1.17|=0.260 | singer sd 0.074
+T1 C=5: M=-0.2851 (C*M=-1.425) band [-0.3286,-0.2514] PASS | null sd 0.041 | desc |CM+1.5|=0.075 |CM+1.17|=0.255 | singer sd 0.057
+T1 C=8: M=-0.1764 (C*M=-1.411) band [-0.2031,-0.1594] PASS | null sd 0.022 | desc |CM+1.5|=0.089 |CM+1.17|=0.241 | singer sd 0.032
+T1: PASS (5/5)
+T2 D_all: exponent -0.503 -> PASS (null exponent -0.501, desc); sqrt(q)*D singer mean 1.732 null 0.999
+T2 D_mid: exponent -0.131 -> FAIL (null exponent -0.520, desc); sqrt(q)*D singer mean 1.201 null 0.962
