@@ -1,0 +1,11 @@
+H=2 rho=-2/1 exps=(-3, 1, 2) deg=2 genus=0 (plane bound 0) sum|exp|=6 1s
+H=2 rho=1/2 exps=(-2, 1, 1): no curve (forbidden)
+H=3 rho=-3/1 exps=(-4, 1, 3) deg=4 genus=0 (plane bound 3) sum|exp|=8 0s
+H=3 rho=-3/2 exps=(-5, 2, 3) deg=12 genus=1 (plane bound 55) sum|exp|=10 2s
+H=4 rho=-4/1 exps=(-5, 1, 4) deg=6 genus=1 (plane bound 10) sum|exp|=10 1s
+H=4 rho=-4/3 exps=(-7, 3, 4) deg=28 genus=16 (plane bound 351) sum|exp|=14 45s
+H=5 rho=-5/1 exps=(-6, 1, 5) deg=8 genus=3 (plane bound 21) sum|exp|=12 2s
+H=5 rho=-5/2 exps=(-7, 2, 5) deg=20 genus=7 (plane bound 171) sum|exp|=14 11s
+H=5 rho=-5/3 exps=(-8, 3, 5) deg=34 genus=22 (plane bound 528) sum|exp|=16 179s
+
+[exited with code 0]

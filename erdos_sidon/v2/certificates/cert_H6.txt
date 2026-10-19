@@ -1,0 +1,4 @@
+rho=-6/1 exps=(-7, 1, 6) [('deg10', 'gcd of smooth-point field degrees = 1 ([1, 2, 4, 5, 10]) | birational (r rational, |b|=1)', 1)]
+rho=-6/5 exps=(-11, 5, 6) [('deg78', 'gcd of smooth-point field degrees = 1 ([9, 48, 53, 58]) | birational (subres1 lc not = 0 on G)', 1)]
+rho=-5/1 exps=(-6, 1, 5) [('deg8', 'smooth pt over degree-4 field at inf; G irreducible over it | birational (r rational, |b|=1)', 1)]
+rho=-5/2 exps=(-7, 2, 5) [('deg20', 'gcd of smooth-point field degrees = 1 ([5, 12, 18]) | birational (subres1 lc not = 0 on G)', 1)]

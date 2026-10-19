@@ -1,0 +1,12 @@
+{"key": [-9, 2, 7], "H": 7, "rho": "-7/2", "status": "ok", "out": "[('deg28', 'gcd of smooth-point field degrees = 1 ([7, 16, 26]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 24}
+{"key": [-9, 1, 8], "H": 8, "rho": "-8/1", "status": "ok", "out": "[('deg14', 'gcd of smooth-point field degrees = 1 ([1, 2, 4, 6, 7, 14]) | birational (r rational, |b|=1)', 1)]\n", "sec": 6}
+{"key": [-9, 4, 5], "H": 5, "rho": "-5/4", "status": "ok", "out": "[('deg50', 'gcd of smooth-point field degrees = 1 ([7, 34, 38]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 64}
+{"key": [-8, 1, 7], "H": 7, "rho": "-7/1", "status": "ok", "out": "[('deg12', 'smooth pt over degree-6 field at inf; G irreducible over it | birational (r rational, |b|=1)', 1)]\n", "sec": 384}
+{"key": [-11, 3, 8], "H": 8, "rho": "-8/3", "status": "ok", "out": "[('deg52', 'gcd of smooth-point field degrees = 1 ([9, 28, 31, 46]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 68}
+{"key": [-8, 3, 5], "H": 5, "rho": "-5/3", "status": "slow", "out": "", "sec": 10801}
+{"key": [-10, 3, 7], "H": 7, "rho": "-7/3", "status": "slow", "out": "", "sec": 10801}
+{"key": [-11, 4, 7], "H": 7, "rho": "-7/4", "status": "slow", "out": "", "sec": 10801}
+{"key": [-13, 5, 8], "H": 8, "rho": "-8/5", "status": "ok", "out": "[('deg98', 'gcd of smooth-point field degrees = 1 ([11, 58, 63, 78]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 338}
+{"key": [-12, 5, 7], "H": 7, "rho": "-7/5", "status": "slow", "out": "", "sec": 10801}
+{"key": [-13, 6, 7], "H": 7, "rho": "-7/6", "status": "ok", "out": "[('deg112', 'gcd of smooth-point field degrees = 1 ([11, 76, 82]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 490}
+{"key": [-15, 7, 8], "H": 8, "rho": "-8/7", "status": "ok", "out": "[('deg152', 'gcd of smooth-point field degrees = 1 ([13, 96, 103, 110]) | birational (subres1 lc not = 0 on G)', 1)]\n", "sec": 1234}
