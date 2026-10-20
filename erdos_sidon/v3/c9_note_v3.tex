@@ -1,0 +1,355 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\title{Dilated Singer sets and the excess in Erd\H{o}s's Sidon problem:\\ a curve-counting theorem, forbidden-structure laws,\\ a resonance theorem, and a reduction}
+\author{Vichien Fugsukjit\\ Independent researcher, Bangkok\\ \small(designed and carried out with AI assistance: Anthropic Claude)}
+\date{Version 3, 21 October 2026 (Version 2: 19 October 2026; Version 1: 16 October 2026)}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $h(N)$ be the maximal size of a Sidon set in $\{1,\dots,N\}$. Erd\H{o}s asked whether $h(N)=N^{1/2}+O(1)$ (Guy C9); the weaker
+$h(N)=N^{1/2}+O_\varepsilon(N^\varepsilon)$ is Erd\H{o}s problem \#30. We study random dilates of Singer perfect difference sets $S$
+($|S|=q+1$, modulus $m=q^2+q+1$) and the number $Z$ of points of a dilate in a window of length $Cq$.
+\emph{Proved:} (i) if the factorial moments of $Z$ converge to the Poisson ones for every fixed order and every window constant $C$, then $h(N)-N^{1/2}$ is unbounded
+(Proposition~\ref{prop:red}); (ii) for a ratio $\rho=u/v$, the number $N(\rho)$ of triples of $S$ with $c-a=\rho(b-a)$ is the number
+of $\mathbb F_q$-points of a twisted form of a curve $C_{u,v}$ that does not depend on $q$, so $N(\rho)/E-1=O_\rho(q^{-1/2})$ whenever
+$C_{u,v}$ minus its diagonal is absolutely irreducible, which we certify by exact computation for 17 ratio orbits, including all
+non-forbidden ratios of height $\le4$ (Theorem~\ref{thm:curve}); (iii) the identity $\sum_\rho N(\rho)^2=\sum_{\lambda,\mu}(|S\cap(\lambda S+\mu)|)_3$.
+\emph{Observed, with pre-registered blind tests:} the deviation of the $k$-th factorial moment from the random value is, to first order,
+$-[\binom k3P_3+\binom k4P_4]$, where $P_3,P_4$ are the window probabilities of 3-term progressions and parallelograms (asymptotically
+$-[\tfrac32\binom k3+2\binom k4]/(Cq)$), for $k\le8$ (up to $k=7$ at $C=2$, $k=8$ at $C=4$) on 129 primes not previously used for $k\ge4$; and $\sum_\rho(N(\rho)-E)^2$ equals the order of the multiplier
+group times $\sum_\rho E$, to within $0.8\%$ for each of 37 primes $293\le q\le2969$ with $m$ prime (mean $2.998$),
+and within $10\%$ for 21 of 23 prime powers $121\le q\le2197$. \emph{New in Version 3:} $3k\mid N(\rho)$ (a free multiplier action, partly machine-checked in Lean), and a resonance theorem for cube $q=r^3$. For the six ratios of the $S_3$-orbit of $r+r^{-1}$ (roots modulo $m$ of $x^3-3x+1$ and $x^3-3x^2+1$), every point of the Singer line not fixed by the $q$-Frobenius has exactly $r$ partners, so $N(\rho)=r(q+1-e)$ with $e\in\{0,1\}$ ($m$ prime). This explains most of the excess of the variance ratio for cube $q$. There is one pre-registered blind test of the predicted excess ($q=12167$), and pre-registered tests of the resonant orbit and of $M/\mu\approx r$ ($q=4913,6859,15625$). The remaining step towards Erd\H{o}s's question is a uniform estimate
+(an average over dilates), which we isolate but do not prove; the Erd\H{o}s question remains open.
+\end{abstract}
+
+\section{Background}
+A set $A\subset\mathbb Z$ is Sidon if all sums $a+b$ ($a\le b$) are distinct. Erd\H{o}s and Tur\'an \cite{ET} showed
+$h(N)\le N^{1/2}+O(N^{1/4})$; Singer's construction \cite{Si} with the Baker--Harman--Pintz prime-gap theorem \cite{BHP} gives
+$h(N)\ge N^{1/2}-O(N^{0.2625})$; the constant in the $N^{1/4}$ term has since been improved several times (Balogh--F\"uredi--Roy
+\cite{BFR} and later work listed at \cite{EP}). Erd\H{o}s offered USD~500 for deciding whether
+$h(N)=N^{1/2}+O(1)$ \cite{Guy,MO}. The site \cite{EP} lists the weaker question $h(N)=N^{1/2}+O_\varepsilon(N^\varepsilon)$ as
+problem \#30 (USD~1000), with the $O(1)$ form as a remark; the evidence below concerns the $O(1)$ question only.
+A Sidon set $A$ modulo $m$ with $|A|=k$, cut at its largest cyclic gap $G$, gives a Sidon set of integers in an interval of length
+$m-G$; for Bose sets \cite{Bo} ($m=q^2-1$, $k=q$) this gives $k-\sqrt{N}\approx G/(2q)$. Martin and O'Bryant \cite{MO} note that
+the question would be answered (excess unbounded) if Bose sets had gaps that are not $O(q)$. Dilating $A$ by a unit $t$ preserves
+the Sidon property and moves the gaps; the use of dilates was suggested in B.~Green's comment on \cite{Go} (see also \cite{Gr}; earlier computer searches of dilates and cuts: \cite{Z,RD}), and Shakan \cite{Sh}
+proved that every $A\subset\mathbb F_p$ with $|A|>1$ has a dilate with a gap of at least $2p/|A|-2$.
+
+\section{Dilate gaps of Bose sets}
+For every prime $q$ in the ranges below we built $\mathrm{Bose}(q)\subset\mathbb Z/(q^2-1)$, checked the Sidon property, and computed
+$G^*(q)=\max_t G(tA)$ over one multiplier per class $\{\pm t,\pm tq\}$. Positive control: $q=829$ gives excess $10.2797$, matching
+Zhang's bound $K(p_{145})>10.279$ ($p_{145}=829$) \cite{Z}.
+\begin{itemize}
+\item $101\le q\le2003$ (279 primes): a $\log q$ law fitted on $q\le1000$, $g^*\approx-6.92+3.63\ln q$, gives held-out ($q>1000$)
+RMSE $1.22$, against $4.25$ for a constant fitted on the same data. (Saturating bounded models were not tested.)
+\item Blind test (law registered before computing): 48 primes $2011\le q\le5881$ (every 10th prime in $(2003,6000]$): RMSE $1.52$
+(log) against $7.34$ (constant), mean signed error $-0.57$. The largest $q$ ($5881$) gives a Sidon set of size $5881$ in $[1,34{,}453{,}078]$ with excess $11.33$; the largest excess in
+this set is $13.18$ ($q=5039$).
+\item Null model: random $q$-subsets of $\mathbb Z/(q^2-1)$ show the same growth (Bose slightly lower at 15 of 20 primes), so the
+$\log q$ growth is random-set behaviour; counts of 3-term relations $e_1L_1+e_2L_2+e_3L_3\equiv0$ among the discrete logarithms are at
+the random level (mean per-$q$ ratio $0.983$ over 11 primes $101\le q\le383$; percentile bootstrap over the primes, 95\% interval
+$[0.96,1.00]$).
+\end{itemize}
+
+\section{The moment route for Singer sets}
+Let $S$ be a Singer set \cite{Si} ($|S|=n=q+1$, $m=q^2+q+1$), $\ell=Cq$, and $Z_{t,s}=\#\{a\in S:(ta+s)\bmod m\in[0,\ell)\}$ for
+units $t$ and shifts $s$. Let $F_k$ be the average of the falling factorial $(Z)_k$ and $H_k=(n)_k(\ell)_k/(m)_k$ its value for a
+uniformly random $n$-subset; $R_k=F_k/H_k-1$.
+\begin{proposition}
+For every unit $t$, $\operatorname{Var}_s Z_{t,s}=q\ell(m-\ell)/m^2$ and $R_2=0$. If $m$ is prime, averaging over all units,
+\[ R_3=\sum_{\rho\ne0,1}\Bigl(\frac{N(\rho)}{E}-1\Bigr)\frac{A(\rho)}{\sum_\sigma A(\sigma)},\qquad
+N(\rho)=\#\{(a,b,c)\in S^3\ \text{distinct}: c-a\equiv\rho(b-a)\},\ E=\frac{(n)_3}{m-2},\]
+where $A(\rho)$ is the average over $u\in(\mathbb Z/m)^\times$ of the number of windows $[s,s+\ell)$ containing $\{0,u,u\rho\}$, and
+$\sum_\sigma A(\sigma)=\ell(\ell-1)(\ell-2)/(m-1)$.
+\end{proposition}
+(The first part holds because every nonzero residue is exactly one difference of $tS$ and $(n)_2=m-1$; for the second, $m$ prime
+lets every triple be written as $(a,b,c)$ with $c-a=\rho(b-a)$, and averaging over all units $u$ sends it to every pair $(u,u\rho)$.) Since a perfect difference set
+has $N(-1)=N(2)=N(1/2)=0$ and $A(\rho)\approx\ell^2/(2m)$ for these $\rho$, the three forbidden ratios contribute
+$-3/(2Cq)(1+O(1/q))$ (within $0.2\%$ for $q\ge293$, $1.2\%$ at $q=41$).
+\begin{itemize}
+\item $R_k\sim c_k(C)/q$ (moments estimated from 4000 sampled multipliers): registered blind test for $k=4$ on 11 new primes
+$409\le q\le601$ ($C=2$: RMSE $0.0028$ for $c/q$ against $0.0238$ for a constant; $C=4$: $0.0013$ against $0.0112$); the same is seen
+descriptively for $k=3,5,6$, with $|c_k|$ growing quickly in $k$.
+\item Exact over all units: registered tests on 18 primes $293\le q\le1373$ ($m$ prime) and, from a sealed data set opened under a
+frozen plan, 17 primes $1559\le q\le2969$: the mean of $C\,qR_3$ is between $-1.45$ and $-1.41$, resp.\ between $-1.47$ and $-1.46$,
+inside the registered bands around $-3/2$ for all $C\in\{2,3,4,5,8\}$. The first test could not separate $-3/2$ from an earlier
+empirical value $-1.17$; the second band ($[-1.59,-1.31]$) excludes it.
+\item The RMS deviation $D_{\rm mid}$ of $N(\rho)/E$ over ratios of height $3$--$6$: the registered decay test on $293\le q\le1373$
+alone \emph{failed} (slope $-0.13\pm0.17$, outside the band $[-0.65,-0.35]$; few independent values per $q$). A second test, frozen
+before opening the sealed data but pooling them with the already seen first set, gives slope $-0.504\pm0.098$ over $293\le q\le2969$
+(the sealed set alone: $-1.28\pm0.39$, i.e.\ noisy); $\sqrt q\,D_{\rm mid}$ lies between $0.49$ and $1.84$. Over all ratios the exponent is $-0.50$ in both
+sets, with $\sqrt q\,D_{\rm all}\approx1.73$ for Singer sets against about $1.0$ for random sets, consistent with counting noise
+inflated by the size-3 orbits of the multiplier $q$. These data are consistent with, but do not establish, a $q^{-1/2}$ law.
+\end{itemize}
+Sections~4--8 and~\ref{sec:rem} (new in Version~2; Sections~\ref{sec:orb}--\ref{sec:resblind} are new in Version~3) turn the heuristic of Version~1 into a theorem for each fixed ratio, give exact identities,
+explain the constants $c_k$, and state the reduction precisely.
+
+\section{The reduction}\label{sec:red}
+\begin{proposition}\label{prop:red}
+Fix $C>0$ and let $\ell=\lfloor Cq\rfloor$. Suppose that for every fixed $k\ge1$, $R_k=R_k(q,C)\to0$ as $q\to\infty$ through primes.
+Then for all large $q$ some dilate of $S$ has an empty arc of length $\ell$, and $\limsup_{N\to\infty}(h(N)-N^{1/2})\ge(C+1)/2$.
+In particular, if this holds for every $C$, then $h(N)-N^{1/2}$ is unbounded.
+\end{proposition}
+\begin{proof}
+Choose $(t,s)$ uniformly. Since $Z\le n$, inclusion--exclusion gives $\Pr(Z=0)=\sum_{k\ge0}(-1)^kF_k/k!$, and the Bonferroni
+inequalities give $\Pr(Z=0)\ge\sum_{k=0}^{2K+1}(-1)^kF_k/k!$ for every $K$. Since $H_k=(n)_k(\ell)_k/(m)_k\to C^k$, the hypothesis gives
+$F_k\to C^k$ for each fixed $k$. Choose $K$ with $\bigl|\sum_{k\le2K+1}(-1)^kC^k/k!-e^{-C}\bigr|<e^{-C}/2$; then $\Pr(Z=0)>0$ for all
+large $q$, so some dilate $tS$ misses a window of length $\ell$. Rotating, $tS$ lies in an interval of length $m-\ell$; a Sidon set
+modulo $m$ is a Sidon set of integers, so we get $q+1$ elements in $[1,N]$ with $N=m-\ell=q^2+(1-C)q+O(1)$ and
+$q+1-N^{1/2}=(C+1)/2+O(1/q)$.
+\end{proof}
+The cutting step is classical (Section~1); what we add is the reduction of unbounded excess to the convergence of fixed-order factorial
+moments of window counts. We did not find it in the literature (Section~\ref{sec:lim}).
+
+\section{Universal curves: a theorem for each fixed ratio}
+Write $S=\{i:g^i\in L\}$ with $g$ a generator of $\mathbb F_{q^3}^\times$ and $L$ a 2-dimensional $\mathbb F_q$-subspace. For
+$\rho=u/v$ put $(\alpha,\beta,\gamma)=(u-v,v,-u)$, so $\alpha+\beta+\gamma=0$, and let
+\[C_{u,v}:\qquad s^\alpha r^\beta t^\gamma=1,\qquad (s-1)^\alpha(r-1)^\beta(t-1)^\gamma=1 .\]
+\begin{theorem}\label{thm:curve}
+(a) For $q$ prime, $N(\rho)$ equals the number of $\mathbb F_q$-points of a twisted form of $C_{u,v}$ off its diagonal $s=r=t$, up to
+$O_\rho(1)$; the twist is Frobenius composed with the order-3 map $s\mapsto1-1/s$.
+(b) For $\rho\in\{-1,2,1/2\}$, $C_{u,v}$ is the diagonal, so $N(\rho)=0$.
+(c) If $C_{u,v}$ minus the diagonal is absolutely irreducible over $\overline{\mathbb Q}$, then $N(\rho)/E-1=O_\rho(q^{-1/2})$ for all
+primes $q>q_0(\rho)$.
+(d) The hypothesis of (c) holds for every ratio of height $\le4$ other than $-1,2,1/2$ (five orbits) and for the orbits (under $\rho\mapsto1-\rho,1/\rho$) of
+$-5,-5/2,-5/4,-6,-6/5,-7,-7/2,-7/6,-8,-8/3,-8/5,-8/7$: 17 orbits in all. With (b), 18 of the 22 orbits of height $\le8$ are settled.
+\end{theorem}
+\begin{proof}[Proof sketch]
+(a) With $x=g^a$, $y=g^b$, $z=g^c$ the condition is $x^{u-v}z^{v}y^{-u}\in\mathbb F_q^\times$. Parametrise $P(L)\cong\mathbb P^1(\mathbb F_q)$
+by $x=e+sf$; the three conjugate linear forms $e^{q^i}+sf^{q^i}$ have distinct roots, and a M\"obius change of variable over
+$\mathbb F_{q^3}$ sending them to $\infty,0,1$ turns $w\in\mathbb F_q^\times$, i.e.\ $w=w^q=w^{q^2}$, into the two equations of
+$C_{u,v}$ (the constants cancel because $\alpha+\beta+\gamma=0$); Frobenius becomes the stated twist. (b) For exponents $(-2,1,1)$ the
+equations give $r+t=2s$ and $rt=s^2$. (c) Absolute irreducibility over $\overline{\mathbb Q}$ persists modulo all large primes; apply the
+Weil bound for singular curves \cite{AP} to a $p$-independent projective model; excluded points are $O_\rho(1)$ and $E=q+O(1)$.
+(d) Eliminating one variable by a resultant gives a plane curve $G$; we exhibit smooth points of $G$ over number fields whose degrees
+have $\gcd1$ (or one quadratic or cubic field over which $G$ stays irreducible). A geometric component through a smooth $K$-point is
+defined over a subfield of $K$, so the number of components divides every such degree and equals $1$. Birationality of the projection
+is checked by subresultants. Exact arithmetic in SymPy; certificates and code are released. An independent review checked (a)--(c)
+and the certificate logic, and confirmed (a) by exact counts for $q=5,7,11,13$.
+\end{proof}
+Numerically, the genus of $C_{u,v}$ appears to grow at least quadratically in the height (for example $(n-3)(n-4)/2$ for exponents $(-n,1,n-1)$, $n\le6$,
+by Riemann--Hurwitz with numerical monodromy), so Theorem~\ref{thm:curve} alone does not give $R_3\to0$; see Section~\ref{sec:rem}.
+Four further orbits ($-5/3,-7/3,-7/4,-7/5$) exceeded our 10-hour certification budget; none failed.
+
+\section{Exact identities}
+Let $I_\lambda(\mu)=|S\cap(\lambda S+\mu)|$ and let $m$ be prime. Two ordered triples of $S$ with the same ratio determine a unique affine map
+$x\mapsto\lambda x+\mu$ taking one to the other, hence
+\[\sum_{\rho\ne0,1}N(\rho)^2=\sum_{\lambda\in(\mathbb Z/m)^\times}\ \sum_{\mu}\bigl(I_\lambda(\mu)\bigr)_3,\]
+which we also checked exactly for $q=5,17,41,59$. Since every nonzero residue is a unique difference, $\sum_\mu(I_\lambda(\mu))_2=m-1$
+for every $\lambda$: second moments are exactly Poisson. For the multipliers $\lambda\in\{1,q,q^2\}$, $\lambda S$ is a translate of
+$S$ and one $\mu$ gives $I=n$, contributing exactly $3(n)_3$. Under $x\mapsto x^\lambda$, a dilate by $\lambda$ whose base-$q$ digits
+have sum $d$ maps the line $L$ into a curve of degree $d$, so $I_\lambda\le d$ by B\'ezout unless $L$ lies on that curve (this does not happen for $d=2$ and odd $q$); for $d=2$ (for example $\lambda=-1$, a
+conic) $(I_\lambda)_3=0$. Numerically, the non-multiplier $\lambda$ with $\sum_\mu(I_\lambda(\mu))_3=0$ are exactly the nine elements
+$\{-1,2,1/2\}\cdot\{1,q,q^2\}$ for $q=41,59,167,173,293,383$ (all $\lambda$ computed); the arc and oval facts behind $-1$ and $2$ are classical
+\cite{JV,Pi}.
+
+\section{Higher moments: the forbidden-structure law (blind tests)}
+A Sidon set contains no 3-term progression and no non-trivial parallelogram $x+y=z+w$. Let $P_3(\ell)$, resp.\ $P_4(\ell)$, be the
+probability that an ordered distinct triple of positions in $[0,\ell)$ contains a 3-term progression, resp.\ that an ordered distinct
+quadruple is a parallelogram; $P_3\sim3/(2\ell)$ and $P_4\sim2/\ell$. The first-order prediction is
+\[R_k\approx-\Bigl[\tbinom k3P_3(\ell)+\tbinom k4P_4(\ell)\Bigr]\sim-\frac{\tfrac32\binom k3+2\binom k4}{Cq}.\]
+Two registered blind tests (blind for $k\ge4$ in the first, for all $k$ in the second) used plans frozen with a recorded SHA-256 before computing, 3000 sampled unit classes per $q$, and the
+inverse-variance pooled ratio measured/predicted. On 65 primes $607\le q\le1499$ with $C=2$, $k=3,\dots,6$ gave $1.02,1.06,1.06,1.05$
+(all 95\% intervals contain $1$). On the other 64 primes of that range, $C=2$ gave $0.97,0.97,0.97,0.97,1.01$ for $k=3,\dots,7$ (the
+$k=8$ cell is void because its null control failed), and $C=4$ gave $0.95,0.98,1.00,1.00,1.00,1.01$ for $k=3,\dots,8$. Random sets were
+within $3$ standard errors of $0$ in every other cell. So no new forbidden structure appears up to $8$ points, and $c_k\sim k^4$ explains the fast growth
+noted in Version~1.
+
+\section{Variance law and prime powers}
+\begin{conjecture}\label{conj:var}
+$\sum_{\rho}(N(\rho)-E)^2=|G|\,\sum_\rho E\,(1+o(1))$, where $|G|$ is the order of the multiplier group ($|G|=3$ for prime $q$, $|G|=3k$ for
+$q=p^k$), the sums run over $\rho$ with $\rho$ and $\rho-1$ units, and $E$ is the mean of $N(\rho)$ over these $\rho$
+(equal to $(n)_3/(m-2)$ when $m$ is prime).
+\end{conjecture}
+By Proposition~\ref{prop:orb} (Section~\ref{sec:orb}), $3k\mid N(\rho)$ for every prime power $q=p^k$. For prime $q$ with $m$ prime, the ratio has mean $2.998$ (s.d.\ $0.008$, range $[2.979,3.019]$) over 37 primes
+$293\le q\le2969$. For prime powers (Singer sets built in $\mathbb F_{p^{3k}}$; registered test) the ratio divided by $3k$ is given in
+Table~\ref{tab:pp}. The per-$\lambda$ errors $\sum_\mu(I_\lambda(\mu))_3$ minus the random value have mean about $0$; excluding the nine
+null $\lambda$ they are close to Gaussian, with standard deviation about $4.2\,q$ ($q=383$: $4.21q$, kurtosis $3.01$).
+\begin{table}[h]\centering\small
+\begin{tabular}{rrrrrr}\toprule $q$&$p^k$&$3k$&good $\rho$&ratio&ratio$/3k$\\ \midrule
+121&$11^{2}$&6&2975&6.13&1.022\\
+125&$5^{3}$&9&14059&9.91&1.101\\
+128&$2^{7}$&21&11725&20.30&0.967\\
+169&$13^{2}$&6&9145&6.53&1.089\\
+243&$3^{5}$&15&50149&14.62&0.974\\
+256&$2^{8}$&24&13145&24.35&1.014\\
+289&$17^{2}$&6&16775&6.32&1.053\\
+343&$7^{3}$&9&37135&10.62&1.180\\
+361&$19^{2}$&6&30625&6.12&1.020\\
+512&$2^{9}$&27&262655&28.04&1.039\\
+529&$23^{2}$&6&55055&5.75&0.959\\
+625&$5^{4}$&12&86855&12.05&1.004\\
+729&$3^{6}$&18&449225&18.76&1.042\\
+841&$29^{2}$&6&192335&6.00&1.000\\
+961&$31^{2}$&6&195755&6.00&0.999\\
+1024&$2^{10}$&30&245105&29.96&0.999\\
+1331&$11^{3}$&9&1772891&9.48&1.053\\
+1369&$37^{2}$&6&386425&6.07&1.012\\
+1681&$41^{2}$&6&937945&6.00&1.001\\
+1849&$43^{2}$&6&947903&5.98&0.996\\
+2048&$2^{11}$&33&2997385&33.22&1.007\\
+2187&$3^{7}$&21&4048957&21.03&1.001\\
+2197&$13^{3}$&9&1609667&9.79&1.088\\
+\bottomrule\end{tabular}
+\caption{Variance ratio $\sum(N-E)^2/\sum E$ over $\rho$ with $\rho,\rho-1$ units, for Singer sets with $q=p^k$, $k\ge2$ (registered test: within 10\% of $3k$ for at least 80\% of $q\ge121$; here 21 of 23; the two misses and most of the excess at cube $q$ are accounted for by the resonance of Section~\ref{sec:res} (Table~\ref{tab:res}); for $q<121$, outside the registered range, the ratio$/3k$ is far from 1, e.g.\ $0.20$ at $q=9$, $0.69$ at $q=49$, $0.83$ at $q=81$; later runs: all 11 later non-cube $q$ ($2209,2401,2809,3125,3481,3721,4489,6561,8192,14641,16384$) give ratio$/3k\in[0.9980,1.0026]$; the later cube $q=4096,4913,6859$ give $1.022,1.038,1.064$, see Table~\ref{tab:res}).}\label{tab:pp}\end{table}
+\begin{proposition}[conditional]
+If $\sum_\rho(N(\rho)-E)^2\ll q^3$, then $R_3=O\bigl(\sqrt{\log q/q}\,\bigr)$.
+\end{proposition}
+\begin{proof}[Proof sketch]
+By the Proposition of Section~3, $R_3=\sum_\rho(N/E-1)(w(\rho)-\bar w)$ with $w=A/\sum A$, because $\sum_\rho N(\rho)=(n)_3$ makes the
+uniform part vanish. Cauchy--Schwarz gives $|R_3|\le E^{-1}\bigl(\sum_\rho(N-E)^2\bigr)^{1/2}\|w-\bar w\|_2$, and lattice-point counting
+for $\{(x,y):y\equiv\rho x\}$ in $(-\ell,\ell)^2$ gives $\|w-\bar w\|_2\ll\sqrt{\log q}/q$.
+\end{proof}
+
+\section{Orbits of the multiplier group}\label{sec:orb}
+\begin{proposition}\label{prop:orb}
+Let $q=p^k$ and let $N(\rho)$ count triples $(a,b,c)\in S^3$ with $b-a$ a unit and $c-a=\rho(b-a)$ (for prime $m$ this is the count of Section~3).
+Then $3k\mid N(\rho)$ for every $\rho$.
+\end{proposition}
+\begin{proof}
+By the multiplier theorem, some translate of $S$ is fixed by multiplication by $p$ \cite{Ha,MR}. $N$ is translation invariant, so assume $pS=S$.
+We have $p^{3k}-1=(q-1)m$. If $p^j\equiv1\pmod m$ with $0<j<3k$, then $m\mid p^d-1$ for $d=\gcd(j,3k)\le 2k$, which is impossible because $0<p^d-1<m$.
+So $p$ has order $3k$ modulo $m$. The map $(a,b,c)\mapsto(pa,pb,pc)$ preserves the set of triples. A triple fixed by $p^j$, $0<j<3k$, would give
+$(p^j-1)(b-a)=0$ with $b-a$ a unit, which is impossible. So the action is free and every orbit has $3k$ elements.
+\end{proof}
+This is elementary and probably known. The order statement and the freeness step are machine-checked in Lean~4 with Mathlib
+(files \texttt{C9Order.lean}, \texttt{C9Orbit.lean}; standard axioms only). The multiplier theorem itself is not formalised.
+So Conjecture~\ref{conj:var} says that $M=N/3k$ is Poisson-like. This holds for non-cube $q$ (Table~\ref{tab:pp}) but fails for cube $q$; the next two sections explain most of this failure.
+
+\section{A resonance theorem for cube $q$}\label{sec:res}
+Let $q=r^3$, where $r$ is a prime power. Let $F=\mathbb F_q$ and $K=\mathbb F_{q^3}=\mathbb F_{r^9}$. Write $\tau(u)=u^r$ and $\varphi=\tau^3$ (the $q$-Frobenius).
+Let $L=\ker\mathrm{Tr}_{K/F}$, so that $S=\{i: g^i\in L\}$. Since $\tau$ commutes with $\varphi$, we have $\tau(L)=L$. Moreover $\varphi$ is $F$-linear on $L$ with $\varphi^3=1$.
+Since $r^9=q^3\equiv1$ and $r^3=q\not\equiv1\pmod m$, $r$ has order $9$ modulo $m$. Put $\rho_1=r+r^{-1}\bmod m$.
+\begin{theorem}\label{thm:res}
+Let $x\in P(L)$ be a point of the Singer line.
+\begin{itemize}
+\item If $\varphi x\ne x$ (projectively), then there are exactly $r$ points $y\in P(L)\setminus\{x\}$ with $z/x=(y/x)^{\rho_1}$ for some $z\in P(L)$.
+\item If $\varphi x=x$, there are none.
+\end{itemize}
+The number $e$ of $\varphi$-fixed points of $P(L)$ is $0$, $1$ or $2$ according as $r\equiv2$, $0$ or $1\pmod3$.
+Consequently, if $m$ is prime, $N(\rho)=r\,(q+1-e)$ for each of the six ratios $\rho$ in the $S_3$-orbit of $\rho_1$; this orbit contains $\rho_0=r^4+r^{-4}=(r+1)r^4$.
+If $r\equiv1\pmod3$ then $3\mid m$, so for prime $m$ we have $e\in\{0,1\}$, and $e=1$ exactly when $p=3$.
+\end{theorem}
+\begin{proof}
+(i) \emph{Reduction.} Put $u=y/x$. Then $y\in P(L)$ iff $\mathrm{Tr}(xu)=0$. If $x$ is not $\varphi$-fixed, then $\psi=\varphi(x)/x\notin F$ and
+$\mathrm{Tr}(x\psi)=\mathrm{Tr}(\varphi x)=0$, so $\{u:\mathrm{Tr}(xu)=0\}=F+F\psi$.
+In $K^\times/F^\times$ the exponent $\rho_1$ acts as $u\mapsto\tau(u)\tau^{-1}(u)$, so we need $z=x\,\tau(u)\,\tau^{-1}(u)\in F^\times L$. That is, $\mathrm{Tr}(x\,\tau(u)\,\tau^{-1}(u))=0$.
+Take $u=1+s\psi$ with $s\in F$; on $F$ we have $\tau s=s^r$ and $\tau^{-1}s=s^{r^2}$. Using $\mathrm{Tr}(x)=0$, the condition reads $As^r+Bs^{r^2}+Cs^{r+r^2}=0$, where
+$A=\mathrm{Tr}(x\tau\psi)$, $B=\mathrm{Tr}(x\tau^{-1}\psi)$ and $C=\mathrm{Tr}(x\,\tau\psi\,\tau^{-1}\psi)$ lie in $F$.
+Remove $s=0$ (that is, $y=x$) and put $Z=s^{-r}$, with $s=\infty$ corresponding to $Z=0$. This gives the affine $\mathbb F_r$-linear equation
+\[A Z^r+BZ+C=0,\qquad Z\in F.\]
+(ii) \emph{Two identities.} Write $\xi_j=\tau^j(x)$ for $j\bmod 9$, with $\xi_j+\xi_{j+3}+\xi_{j+6}=0$. Then $A$, $B$, $C$ are rational functions of $\xi_0,\dots,\xi_5$
+with integer coefficients and monomial denominators, and $\tau$ acts as the index shift. Let $D$ be the Dickson matrix of $f(Z)=AZ^r+BZ$. Exact computation in Sage gives
+\[N_{F/\mathbb F_r}(A)+N_{F/\mathbb F_r}(B)=0\quad\text{and}\quad \mathrm{adj}(D)\,(C,C^r,C^{r^2})^{T}=0.\]
+After clearing the (nonzero) denominators, both are identities between polynomials with integer coefficients that hold over $\mathbb Q$. They therefore hold in every characteristic.
+They were also re-checked directly over $\mathbb F_2,\mathbb F_3,\mathbb F_5,\mathbb F_7$.
+(iii) \emph{Non-degeneracy.} The numerator of $A$ factors as $(\xi_1\xi_3-\xi_0\xi_4)(\xi_1^2+\xi_1\xi_4+\xi_4^2)$, and the denominator is $-\xi_1\xi_4\xi_7\ne0$.
+The second factor vanishes iff $\psi$ is a root of $t^2+t+1$. The first vanishes iff $\tau x=cx$ with $c\in F$, which gives $\varphi x=N_{F/\mathbb F_r}(c)\,x$.
+In both cases $x$ is $\varphi$-fixed. So $A\ne0$, hence $N(B)=-N(A)\ne0$ and $\mathrm{rank}\,D=2$.
+(iv) \emph{Counting.} $N(-B/A)=N(-1)\,N(B)/N(A)=(-1)^{1+r+r^2}\cdot(-1)=1$, so the kernel of $f$ has exactly $r$ elements and $|\mathrm{Im}\,f|=r^2$.
+Since $\mathrm{adj}(D)\,D=\det(D)\,I=0$, each row $(w_0,w_1,w_2)$ of $\mathrm{adj}(D)$ annihilates $(b,b^r,b^{r^2})$ for every $b\in\mathrm{Im}\,f$.
+A nonzero row gives a nonzero linearised polynomial of degree at most $r^2$. Its zero set therefore has at most $r^2$ elements and contains $\mathrm{Im}\,f$, so it equals $\mathrm{Im}\,f$.
+By (ii), $-C\in\mathrm{Im}\,f$, so there are exactly $r$ solutions $Z$, that is, $r$ partners $y$.
+(v) \emph{Fixed points.} The $\varphi$-fixed points of $P(L)$ are the eigenlines of the $F$-linear map $\varphi|_L$, whose eigenvalues are cube roots of unity in $F$.
+The eigenvalue $1$ needs $x\in F$, and then $\mathrm{Tr}(x)=3x$ vanishes only if $p=3$.
+\begin{itemize}
+\item If $r\equiv2\pmod3$, then $F$ has no primitive cube root of unity, so $e=0$.
+\item If $p=3$, then $\varphi|_L$ is unipotent with fixed line $F\cdot1$, so $e=1$.
+\item If $r\equiv1\pmod3$, then $\varphi|_L$ has the two eigenvalues $\omega,\omega^2$ ($\omega\in F$ a primitive cube root of unity), so $e=2$.
+\end{itemize}
+For a fixed point:
+\begin{itemize}
+\item If $\varphi x=\omega x$, then $K$ splits into $\varphi$-eigenlines, which $\tau$ preserves, so $\tau x=cx$ and $\tau^{-1}x=c'x$ with $c,c'\in F$, and $\{u:\mathrm{Tr}(xu)=0\}=F+Fx$.
+For $u=\beta_0+\beta x$ the condition becomes $3cc'\beta^{r+r^2}x^3=0$, i.e.\ $\beta=0$, i.e.\ $y=x$.
+\item If $p=3$, then $L=F+Fv$ with $\varphi v=v+\alpha$, $\alpha\in F^\times$. For $y=\beta_0+\beta v$, the condition reduces to $\mathrm{Tr}(v^2)\,\beta^{r+r^2}=0$ with $\mathrm{Tr}(v^2)=-\alpha^2\ne0$, so again $y=x$.
+\end{itemize}
+Summing over $x$ gives $N(\rho_1)$ when $m$ is prime, because then every nonzero difference is a unit.
+The maps $(a,b,c)\mapsto(b,a,c)$ and $(a,b,c)\mapsto(a,c,b)$ realise $\rho\mapsto1-\rho$ and $\rho\mapsto1/\rho$ and preserve the unit conditions, so $N$ is constant on the $S_3$-orbit.
+\end{proof}
+The theorem was also checked by independent brute force for $r\le13$; for $q=8,27,512,1331$ it was checked on all six ratios. An independent AI review accepted it after the fixes included here.
+
+\emph{Algebraic form.} The six ratios of the orbit are roots modulo $m$ of $x^3-3x+1$ and $x^3-3x^2+1$. For prime $m$ they are all of the roots;
+for composite $m$ these cubics can have more roots, by the Chinese remainder theorem. The first is the minimal polynomial of $2\cos(2\pi/9)=\zeta_9+\zeta_9^{-1}$, with $\zeta_9\mapsto r$.
+Its root set is invariant under $x\mapsto1/(1-x)$, the inverse of the order-3 map $s\mapsto1-1/s$ of Theorem~\ref{thm:curve}(a).
+
+\section{The resonance and the cube excess}\label{sec:resblind}
+For the six resonant ratios $M(\rho)\approx r\mu$. If all other ratios behaved as in Conjecture~\ref{conj:var}, then $\mathrm{Var}\,M/\mathbb E\,M$ would exceed 1 by about
+\[\Delta=6(r-1)^2\mu/n_{\rm good},\qquad n_{\rm good}=\prod_{\ell^e\|m}\ell^{e-1}(\ell-2),\quad \mu=\frac{(q+1)q(q-1)}{3k\,n_{\rm good}}\prod_{\ell\mid m}\frac{(\ell-1)(\ell-2)}{\ell^2}.\]
+This is a heuristic, not a theorem; it decays like $q^{-1/3}$.
+
+\emph{Registration.}
+\begin{itemize}
+\item The value of $\Delta$ was registered before computation only for $q=12167$.
+\item The statements "the six largest $M(\rho)$ are roots of the cubics" and "$M/\mu\in[0.8r,1.2r]$" were registered before computation for $q=4913,6859$. For $q=15625$ the registration was "the cubic orbit is among the twelve largest, with $M/\mu\in[20,30]$".
+\item All other entries of Table~\ref{tab:res} are retrospective.
+\end{itemize}
+The plan file and its SHA-256 ledger are released. Registration times are self-attested.
+\begin{table}[h]\centering\small
+\begin{tabular}{rrrrrl}\toprule $q$&$k$&$\Delta$ formula&observed&top-6 $M/\mu$ ($r$)&status\\ \midrule
+125&3&0.089&0.101&4.91 (5)&retrospective\\
+343&3&0.143&0.180&7.19 (7)&retrospective\\
+512&9&0.021&0.039&8.03 (8)&retrospective\\
+729&6&0.032&0.042&8.86 (9)&retrospective\\
+1331&3&0.0500&0.0534&11.0 (11)&retrospective (local computation)\\
+2197&3&0.0873&0.0877&-- (13)&retrospective\\
+4096&12&0.020&0.022&15.93 (16)&retrospective\\
+4913&3&0.0368&0.0377&17.01 (17)&top-6, $M/\mu$ registered\\
+6859&3&0.0631&0.0635&18.94 (19)&top-6, $M/\mu$ registered; $\Delta$ retrospective\\
+12167&3&0.0281&0.0281&22.99 (23)&\textbf{$\Delta$ registered (blind)}; top-6, $M/\mu$ retrospective\\
+15625&6&0.0261&0.0261&24.95 (25)&top-6, $M/\mu$ registered; $\Delta$ not registered\\
+19683&9&0.0077&0.0092&27.01 (27)&exploratory ($p=3$)\\
+\bottomrule\end{tabular}
+\caption{The resonance and the cube excess. Wherever the six largest $M(\rho)$ were recorded, they are roots of the two cubics and $M/\mu\approx r$.
+Non-cube controls ($q=8192,14641,16384$) give ratio$/3k\in[0.9997,1.0024]$.}\label{tab:res}\end{table}
+
+For $k=3$ and $q\ge1331$, the formula gives $94$--$100\%$ of the observed excess. In the other rows of Table~\ref{tab:res} it gives $55$--$100\%$ (lowest at $q=512$).
+Two earlier registered readings failed at $q=6859$: a $q^{-1/2}$ decay band, and a $p\equiv1\pmod3$ effect. Registered tests at $q=24389$ and $q=32768$ are pending.
+For $k=6,9,12$ a second, weaker orbit appears, with $M/\mu=2.77,\,3.91,\,4.00,\,2.98$ at $q=729,4096,15625,19683$. Its ratios are not roots of integer
+polynomials of degree $\le4$ with coefficients bounded by 4, and they are not of the form $p^a\pm p^b\pm p^c$. We have not identified this orbit.
+At $q=19683$ it contributes only about $10\%$ of the residual $0.0015$; most of the residual comes from several hundred ratios with $M/\mu\approx2$.
+Weaker levels with $M/\mu\approx2$ also occur for $k=3$ ($q=4913,12167$) and for the non-cube control $q=16384$. They are also unexplained.
+
+\section{What remains}\label{sec:rem}
+By Proposition~\ref{prop:red}, a negative answer to the $O(1)$ question follows from $R_k\to0$ for each fixed $k$ and each $C$. For $k=3$ this follows
+from Conjecture~\ref{conj:var}, or from any bound $o(q^4/\log q)$ on the variance. For $k\ge4$ a different decomposition is needed. In
+Fourier terms the missing input is cancellation, on average over the dilation parameter, in correlations of Jacobi sums over
+$\mathbb F_{q^3}$, beyond the square-root (Weil--Deligne) bound for single sums. We do not know how to prove it.
+
+\section{Limitations, literature and disclosure}\label{sec:lim}
+Theorem~\ref{thm:curve} covers fixed ratios only (prime $q$, or large characteristic). The higher-moment and variance laws are
+numerical. Theorem~\ref{thm:res} is proved; two polynomial identities and one factorisation in its proof were verified by exact computer algebra (Sage 10.7; the scripts and their SHA-256 hashes are released) rather than by hand. The excess formula of Section~\ref{sec:resblind} is a heuristic, not a theorem. For Version~3, a search (web, zbMATH Open, three full texts; 20 October 2026) found no prior statement of Theorem~\ref{thm:res}. Proposition~\ref{prop:orb} is elementary and probably known. Proposition~\ref{prop:red} is conditional on moment convergence, which is not proved. A full-text literature review and a
+zbMATH Open search (19 October 2026) found the forbidden ratios, the arc and oval facts \cite{JV,Pi} and the dilate strategy
+(\cite{Go}, Shakan \cite{Sh}). They did not find the curve count, the two laws, the identity of Section~6 or the reduction of
+Section~4. Guy's C9 entry and MathSciNet were not checked. Computations and drafting were done with AI assistance (Anthropic Claude).
+The statements labelled as proved were checked by an independent AI review and by exact computation, but not yet by a human expert.
+
+\section*{Data and code}
+Version 1 release: \url{https://github.com/vichienFF/ramanujan-explorer/tree/main/erdos_sidon}. Version 2 additions (certificates,
+blind-test plans with SHA-256 ledger, Kaggle outputs): \url{https://github.com/vichienFF/ramanujan-explorer/tree/main/erdos_sidon/v2}. Version 3 additions (Lean files, Sage scripts for Theorem~\ref{thm:res}, resonance blind tests): \url{https://github.com/vichienFF/ramanujan-explorer/tree/main/erdos_sidon/v3}.
+
+\begin{thebibliography}{99}
+\bibitem{BHP} R.~C.~Baker, G.~Harman, J.~Pintz, The difference between consecutive primes II, Proc. London Math. Soc. (3) 83 (2001) 532--562.
+\bibitem{BFR} J.~Balogh, Z.~F\"uredi, S.~Roy, An upper bound on the size of Sidon sets, Amer. Math. Monthly 130(5) (2023) 437--445.
+\bibitem{Bo} R.~C.~Bose, An affine analogue of Singer's theorem, J. Indian Math. Soc. (N.S.) 6 (1942) 1--15.
+\bibitem{ET} P.~Erd\H{o}s, P.~Tur\'an, On a problem of Sidon in additive number theory, J. London Math. Soc. 16 (1941) 212--215.
+\bibitem{EP} T.~Bloom, Erd\H{o}s problems, problem \#30, \url{https://www.erdosproblems.com/30}.
+\bibitem{Go} W.~T.~Gowers, What are dense Sidon subsets of $\{1,2,\dots,n\}$ like?, blog post and comments (2012),
+\url{https://gowers.wordpress.com/2012/07/13/what-are-dense-sidon-subsets-of-12-n-like/}.
+\bibitem{Guy} R.~K.~Guy, Unsolved Problems in Number Theory, 3rd ed., Springer 2004, problem C9.
+\bibitem{MO} G.~Martin, K.~O'Bryant, Constructions of generalized Sidon sets, J. Combin. Theory Ser. A 113 (2006) 591--607.
+\bibitem{Sh} G.~Shakan, A large gap in a dilate of a set, arXiv:2004.14828 (2020).
+\bibitem{RD} T.~Rokicki, G.~Dogon, Golomb ruler and Sidon set tables, \url{https://cube20.org/golomb/}.
+\bibitem{AP} Y.~Aubry, M.~Perret, A Weil theorem for singular curves, in: R.~Pellikaan, M.~Perret, S.~G.~Vl\u{a}du\c{t} (eds.), Arithmetic, Geometry and Coding Theory (Luminy 1993), de Gruyter, Berlin 1996, 1--7.
+\bibitem{JV} D.~Jungnickel, K.~Vedder, On the geometry of planar difference sets, European J. Combin. 5 (1984) 143--148.
+\bibitem{Pi} G.~Pickert, Differenzmengen und Ovale, Discrete Math. 73 (1989) 165--179.
+\bibitem{Gr} B.~Green, 100 open problems, Problems 31--32 (manuscript, updated 2026).
+\bibitem{Ha} M.~Hall, Jr., Cyclic projective planes, Duke Math. J. 14 (1947) 1079--1090.
+\bibitem{MR} R.~L.~McFarland, B.~F.~Rice, Translates and multipliers of abelian difference sets, Proc. Amer. Math. Soc. 68 (1978) 375--379.
+\bibitem{Si} J.~Singer, A theorem in finite projective geometry and some applications to number theory, Trans. Amer. Math. Soc. 43 (1938) 377--385.
+\bibitem{Z} Z.~Zhang, Finding finite $B_2$-sequences with larger $m-a_m^{1/2}$, Math. Comp. 63 (1994) 403--414.
+\end{thebibliography}
+\end{document}
