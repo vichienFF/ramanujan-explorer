@@ -1,0 +1,87 @@
+\section{Galois autocorrelation of Jacobi sums: exact values}\label{sec:gal}
+Let $K=\mathbb F_{q^3}$ ($q$ an odd prime), $m=q^2+q+1$, and let $L:K^\times\to\mathbb Z/m$ be the discrete logarithm modulo $m$; its kernel is
+$\mathbb F_q^\times$. Let $\psi$ be a character of $K^\times$ of order $m$ (trivial on $\mathbb F_q^\times$) and put
+$J[a,b]=\sum_{y\in K\setminus\{0,1\}}\psi^a(1-y)\psi^b(y)$, a Jacobi sum. For a unit $l$ modulo $m$ define the \emph{Galois autocorrelation}
+\[C(l)=\sum_{a\ne0}\sum_{b}J[a,b]\,\overline{J[la,lb]},\]
+i.e.\ the correlation of the Jacobi sums with their conjugates under $\zeta_m\mapsto\zeta_m^{\,l}$. Correlations of this kind are the
+missing input of Section~\ref{sec:rem}. We also use the elementary count
+\[P(l)=\#\{(y,c,d):\ y\in K\setminus\{0,1\},\ c,d\in\mathbb F_q^\times,\ c\,y^l+d\,(1-y)^l=1\}\]
+(equivalently, pairs $y,y'$ with $L(1-y')=l\,L(1-y)$ and $L(y')=l\,L(y)$).
+
+\begin{proposition}\label{prop:gal}
+$C(l)=m^2P(l)-((q-1)m-1)^2-(m-1)$ for every unit $l$, and $P(l)=P(l^{-1})$.
+\end{proposition}
+\begin{proof}
+By orthogonality, $\sum_{a,b}J[a,b]\overline{J[la,lb]}=m^2\#\{(y,y'):L(1-y)=lL(1-y'),\,L(y)=lL(y')\}=m^2P(l^{-1})$, and swapping $y,y'$ gives
+$P(l^{-1})=P(l)$. The row $a=0$ equals $\sum_b J[0,b]\overline{J[0,lb]}$ with $J[0,0]=q^3-2=(q-1)m-1$ and $J[0,b]=-1$ for $b\ne0$.
+\end{proof}
+
+For $y\in\mathbb F_q\setminus\{0,1\}$ there are exactly $q-2$ admissible pairs $(c,d)$, so $P(l)\ge(q-2)^2$ always. For $l=3$ and $l=-2$
+the equation is a polynomial over $\mathbb F_q$ of degree $\le4$ in $y$, and its roots in $K\setminus\mathbb F_q$ come from irreducible cubic factors; hence
+$P(l)=(q-2)^2+3I(l)$, where $I(l)$ is the number of $(c,d)\in(\mathbb F_q^\times)^2$ for which the polynomial has an irreducible cubic factor
+($I$ is not the triple count $N(\rho)$ of the earlier sections).
+
+\begin{theorem}\label{thm:gal}
+Let $q\ge5$ be prime. Define $b_q=0$ if $q\equiv2\pmod3$ and $b_q=4x^2-2q$ if $q=x^2+3y^2$ $(q\equiv1\pmod3)$.
+(Numerically, $b_q$ is the $q$-th coefficient of $\eta(2\tau)^3\eta(6\tau)^3$; this is not used below.)
+\begin{itemize}
+\item[(a)] $P(2)=P(-1)=(q-2)^2$, the least possible value.
+\item[(b)] If $q\equiv2\pmod3$, then $P(3)=(q-2)(2q-1)$.
+\item[(c)] $I(-2)=\big((q-2)(q+1)+b_q\big)/3$, hence $P(-2)=(q-2)(2q-1)+b_q$. In particular $P(3)=P(-2)$ when $q\equiv2\pmod3$.
+\end{itemize}
+\end{theorem}
+
+\begin{proof}[Proof of (a)]
+For $l=2$ and $l=-1$ (after clearing denominators) the equation is a nonzero polynomial of degree $\le2$ over $\mathbb F_q$. Its roots lie in
+$\mathbb F_{q^2}\cap K=\mathbb F_q$, so only the $(q-2)^2$ solutions with $y\in\mathbb F_q$ remain.
+\end{proof}
+
+\begin{proof}[Proof of (b), sketch]
+Write $c\,y^3+d(1-y)^3-1$ as $(c-d)\,g(y)$ with $g(y)=y^3+b(y^2-y)+e$. The map $(c,d)\mapsto(b,e)$ is a bijection onto the pairs with
+$b\notin\{0,-3\}$ and $b\ne3e$. On the excluded lines, $g$ has a root in $\mathbb F_q$, since cubing is bijective on $\mathbb F_q$. In the family
+$x^3+b(x^2-x)+e$, two distinct roots determine the third, except when the two roots sum to $1$, which needs $a^2-a+1=0$; this has no solution because
+$-3$ is a non-square. Counting triple roots ($2$), double roots ($q-3$), ordered pairs of roots and root incidences gives
+$(q^2-4q+7)/6$ split, $(q^2+1)/2$ one-root and $(q-2)(q+1)/3$ irreducible members. Hence $I(3)=(q-2)(q+1)/3$ and $P(3)=(q-2)^2+3I(3)$.
+\end{proof}
+
+\begin{proof}[Proof of (c), outline]
+The full proof is in the release (file \texttt{N2\_PROOF.md}); we list the steps. Let $\phi$ be the quadratic character of $\mathbb F_q$.
+(1) For distinct roots $y_1,y_2\in\mathbb F_q\setminus\{0,1\}$ the two root conditions are linear in $(c,d)$, with determinant
+$(y_2-y_1)(y_1+y_2-2y_1y_2)$, $c=y_1^2y_2^2(y_2-y_1)(2-y_1-y_2)/\det$ and $d=(1-y_1)^2(1-y_2)^2(y_2^2-y_1^2)/\det$.
+Put $u=y_1+y_2$ and $v=y_1y_2$.
+(2) The number of admissible unordered pairs is $P_2=(q-3)(q-5)/2$.
+(3) The residual quadratic of the quartic has discriminant $u(u-2)(2v-u+2)/(2v-u)$. Summing its quadratic character over admissible pairs gives
+$S_2=(T-4q+14)/2$ with $T=\sum_{x,z}\phi\big((x^2-1)(z^2-1)(x^2+1-2z)\big)$. The excluded lines contribute $2q-4$, $2q-6$, $-3$ and $0$.
+(4) A change of variables gives $T=1+\phi(-1)G(4)$, where $G(\lambda)=\sum_{x,y}\phi\big(xy(1-x)(1-y)(x-\lambda y)\big)$, and $q^2\,{}_3F_2(4)=\phi(-1)G(4)$
+for Greene's ${}_3F_2$ with quadratic characters.
+(5) The repeated-root types have counts $E_1=(q+1-z_0)/2$ (type $(1)^2(2)$), $E_2=(q-5-z_0)/2$ (type $(1)(1)(1)^2$) and $E_3=z_0/2$ (type $(1)^2(1)^2$), where $z_0=1+\phi(-3)$. A double root $a$ forces $c=a^3$ and $d=-(a-1)^3$.
+(6) Counting roots, pairs and character-weighted pairs by factorisation type gives
+$I(-2)=(q-2)^2-E_1-\tfrac43P_2+\tfrac23S_2-\tfrac13E_2-\tfrac43E_3$.
+(7) The value $q^2\,{}_3F_2(4)=q+b_q$ follows from \cite[Thm.~1.7]{BK} (Greene's ${}_3F_2$ \cite{Gre}, character $S=\phi$, allowed there since $\phi$ has order $2$); the authors of \cite{BK}
+state that $S=\phi$ gives a result of Ono \cite{On}. For $q\equiv2\pmod 3$ the value is $1/q$.
+For $q\equiv1\pmod3$ the theorem gives $[(\phi\chi_3\text{ over }\chi_3)+(\phi\chi_3^2\text{ over }\chi_3^2)]^2-1/q$; here the Hasse--Davenport relation \cite{IR} gives
+$J(\phi\chi_3,\bar\chi_3)=\chi_3(2)\overline{J(\chi_3,\chi_3)}$, and the cubic character of $2$ \cite{IR} makes the real part $\pm x$, so $q^2\,{}_3F_2(4)=4x^2-q=q+b_q$.
+Substituting (2)--(7) into (6) gives (c).
+\end{proof}
+
+\emph{Verification.} Each step was checked by exact computation:
+\begin{itemize}
+\item steps (1)--(6) on all primes $5\le q\le31$;
+\item step (7) on $7\le q\le97$;
+\item the final formula for $I(-2)$ on all primes $5\le q\le53$, by an independent brute-force count;
+\item the identity $b_q=a_q(\eta(2\tau)^3\eta(6\tau)^3)$ on all primes $5\le q\le199$ (numerical only).
+\end{itemize}
+The symbolic identities were checked with SymPy. An independent AI review (local, with its own code) found no error; it is not a human expert review.
+
+\emph{Geometric explanation (not used in the proof).} We identified the source of $b_q$ by exact computation. In the twisted form, the level sets of $\mathrm{Tr}(\alpha)\mathrm{Tr}(\alpha^{-1})$ are the members of the pencil
+$(x+y)(y+z)(z+x)=k\,xyz$. This pencil is the extremal rational elliptic surface with singular fibres $I_6,I_3,I_2,I_1$, i.e.\ the universal curve for $\Gamma_1(6)$.
+The double cover branched at the $I_3$ and $I_1$ fibres is the singular K3 surface with fibres $3I_6+3I_2$ and transcendental lattice $\mathrm{diag}(2,6)$ \cite{HS},
+which has complex multiplication by $\mathbb Q(\sqrt{-3})$; this is why the error term is a CM coefficient.
+
+\emph{Observations.}
+\begin{itemize}
+\item $P(4)=P(-2)$ for all 20 primes $5\le q\le79$ tested. Besides $P(ql)=P(l)$ (Frobenius) and $P(l^{-1})=P(l)$, a search over M\"obius maps with integer coefficients in $[-3,3]$ found no further symmetry of $P$ ($q=11,\dots,23$), so this equality is not explained by such a map.
+\item Among the rationals $a/b$ with $|a|,|b|\le12$ that are units modulo $m$ for every tested $q$ ($11\le q\le41$; this excludes all $a/b$ involving $3$ or $7$), the only classes of equal $P$ beyond $\{l,l^{-1}\}$ are $\{2,-1,\tfrac12\}$ and $\{-2,-\tfrac12,4,\tfrac14\}$. For $q\equiv2\pmod3$ the second class also contains $3$ and $\tfrac13$, by Theorem~\ref{thm:gal}(b),(c).
+\item For other small heights, $(P(l)-(q-2)^2-q^2)/q$ fluctuates more as the height grows: over the primes $47\le q\le79$ its standard deviation grows from about $1$ at $l=-2$ to about $4$ at $l=7$ (smaller $q$ include multiplier coincidences such as $l=q$, which inflate it). This is consistent with cohomology that grows with the height, so these exact formulas do not by themselves give the averaged bound of Section~\ref{sec:rem}.
+\item $N(\rho)$ is an average of root counts of the trinomials $c\,y^\rho+y-1$. Kelley proved, under GRH, that the root counts of random-coefficient trinomials over prime fields are Poisson, and conjectured the same for a fixed prime \cite{Ke,KO,BCR}. The Poisson-type laws of Sections~4--9 are an extension-field analogue in a different regime.
+\end{itemize}
