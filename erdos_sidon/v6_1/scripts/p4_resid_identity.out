@@ -1,0 +1,2 @@
+SYM: {'c': True, '1-c = lead(R)': True, 'degree 2': True, 'disc identity': True} -> PASS
+CONTROL brute force at q=13 (88 pairs): PASS

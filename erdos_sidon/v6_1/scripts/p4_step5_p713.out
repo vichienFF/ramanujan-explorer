@@ -1,0 +1,7 @@
+CONTROL (closed forms = brute-force per-class SPEC at q = 7, 13, 49): PASS
+q=7^1=7 (n odd): closed-form SPEC -6, target -6 -> EQUAL
+q=7^2=49 (n = 2 mod 4): closed-form SPEC -26, target -26 -> EQUAL
+q=7^4=2401 (n = 0 mod 4): closed-form SPEC -2378, target -2378 -> EQUAL
+q=13^1=13 (n odd): closed-form SPEC 0, target 0 -> EQUAL
+q=13^2=169 (n = 2 mod 4): closed-form SPEC -148, target -148 -> EQUAL
+q=13^4=28561 (n = 0 mod 4): closed-form SPEC -28540, target -28540 -> EQUAL

@@ -1,0 +1,13 @@
+CONTROL (GF code = referee4/perclass.pieces at q=11,13,17,19): PASS
+q=7^2=49 brute {'c=1': 74, 'c+d=0': -36, 'rep': -64} closed {'c=1': 74, 'c+d=0': -36, 'rep': -64} | SPEC -26 target -26 -> EQUAL
+q=11^2=121 brute {'c=1': 210, 'c+d=0': -106, 'rep': -204} closed {'c=1': 210, 'c+d=0': -106, 'rep': -204} | SPEC -100 target -100 -> EQUAL
+q=13^2=169 brute {'c=1': 310, 'c+d=0': -150, 'rep': -308} closed {'c=1': 310, 'c+d=0': -150, 'rep': -308} | SPEC -148 target -148 -> EQUAL
+q=7^3=343 brute {'c=1': 674, 'c+d=0': -340, 'rep': -676} closed {'c=1': 674, 'c+d=0': -340, 'rep': -676} | SPEC -342 target -342 -> EQUAL
+q=17^2=289 brute {'c=1': 546, 'c+d=0': -274, 'rep': -540} closed {'c=1': 546, 'c+d=0': -274, 'rep': -540} | SPEC -268 target -268 -> EQUAL
+q=19^2=361 brute {'c=1': 690, 'c+d=0': -346, 'rep': -684} closed {'c=1': 690, 'c+d=0': -346, 'rep': -684} | SPEC -340 target -340 -> EQUAL
+q=23^2=529 brute {'c=1': 1026, 'c+d=0': -514, 'rep': -1020} closed {'c=1': 1026, 'c+d=0': -514, 'rep': -1020} | SPEC -508 target -508 -> EQUAL
+q=29^2=841 brute {'c=1': 1650, 'c+d=0': -826, 'rep': -1644} closed {'c=1': 1650, 'c+d=0': -826, 'rep': -1644} | SPEC -820 target -820 -> EQUAL
+q=11^3=1331 brute {'c=1': 2654, 'c+d=0': -1326, 'rep': -2652} closed {'c=1': 2654, 'c+d=0': -1326, 'rep': -2652} | SPEC -1324 target -1324 -> EQUAL
+q=37^2=1369 brute {'c=1': 2706, 'c+d=0': -1354, 'rep': -2700} closed {'c=1': 2706, 'c+d=0': -1354, 'rep': -2700} | SPEC -1348 target -1348 -> EQUAL
+q=13^3=2197 brute {'c=1': 4376, 'c+d=0': -2184, 'rep': -4376} closed {'c=1': 4376, 'c+d=0': -2184, 'rep': -4376} | SPEC -2184 target -2184 -> EQUAL
+q=7^4=2401 brute {'c=1': 4778, 'c+d=0': -2388, 'rep': -4768} closed {'c=1': 4778, 'c+d=0': -2388, 'rep': -4768} | SPEC -2378 target -2378 -> EQUAL

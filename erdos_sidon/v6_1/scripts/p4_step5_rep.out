@@ -1,0 +1,5 @@
+SYM identities: {'double root': True, 'disc': True, 'Q(Y)': True, 'Q(1) ~ c-1': True, 'c+d=0': True, 't->-t': True, 't->it': True, 'norm': True} -> PASS
+CONTROL vs referee brute force (perclass.pieces) at 75 primes 7..397: PASS
+examples (q, brute, closed): [(7, -4, -4), (11, -12, -12), (13, -8, -8), (17, -12, -12), (19, -12, -12)]
+collision primes of the rep loci (pairwise resultants): [2, 3, 5, 7, 13]
+explicit formula vs brute force at 75 primes: PASS

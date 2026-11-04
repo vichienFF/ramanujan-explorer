@@ -1,0 +1,3 @@
+SYM identities: {'conic': True, 'Viete t3': True, 'd(u)': True, 'd(u) = g(root)': True, 'Delta': True, 'a=-1': True, 't3 in {a,b}': True, '-D4 square': True, 'singular a^2+b^2=0 <-> u^2=2v': True} -> PASS
+CONTROL vs referee brute force (perclass.pieces) at 75 primes 7..397: PASS
+examples (q, brute, per-u, closed): [(7, 2, 2, 2), (11, 14, 14, 14), (13, 8, 8, 8), (17, 24, 24, 24)]

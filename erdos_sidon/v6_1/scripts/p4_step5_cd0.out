@@ -1,0 +1,3 @@
+SYM identities: {'conic': True, 'y-equation': True, '-D4 on conic': True, 'singular on conic': True, 'e(sigma)': True, 'e=1 factor': True, 's3 in {s1,s2}': True} -> PASS
+CONTROL vs referee brute force (perclass.pieces) at 75 primes 7..397: PASS
+examples (q, brute, per-sigma, closed): [(7, -4, -4, -4), (11, -6, -6, -6), (13, 0, 0, 0), (17, -8, -8, -8)]
