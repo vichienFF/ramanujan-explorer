@@ -1,0 +1,6 @@
+CONTROL torsion h=0, h(2P)=4h(P), h(P+T)=h(P): PASS
+heights: [3/2, 2/3, 1/6, 1/6, 2/3, 3/2, 3/2, 2/3, 1/6, 1/6, 2/3]
+exact Gram rank over QQ: 2
+basis rows (0, 1) Gram [3/2, 0, 0, 2/3] det 1 -> |disc NS| (sublattice) = 3072*det/16 = 192
+Z-span basis coords [1, 0, 0, 1/2] Gram [3/2, 0, 0, 1/6] det 1/4 -> |disc NS| = 3072*det/16 = 48
+fibres I_n: [4, 4, 2, 2, 2, 2, 2, 6] | trivial lattice |disc| = 3072 (expect 3072)

@@ -1,0 +1,4 @@
+q=27 control done in 0s
+q=81 control done in 1s
+CONTROL (Sage values q=9,27,81; Singer property q=9): PASS
+q=243 F3(4)=58320 predicted 58320 -> EQUAL (16s)

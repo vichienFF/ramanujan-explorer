@@ -1,0 +1,2 @@
+CONTROL torsion h=0, h(2P)=4h(P), h(P+T)=h(P): PASS
+CONTROL sigma fixes Q-rational P1 and sigma^2=1: PASS | sigma matrix [-1, 0, 0, 1] | trace 0 -> m(q) = 1 + (-1/q)

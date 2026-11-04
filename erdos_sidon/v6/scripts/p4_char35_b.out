@@ -1,0 +1,3 @@
+CONTROL: PASS
+q=625 B=1875 predicted 3125 -> FAILS (diff -1250)
+q=729 B=2187 predicted 2187 -> HOLDS

@@ -1,0 +1,9 @@
+CONTROLS: PASS
+q=25 F3(4)=648 predicted 648 -> EQUAL (0s)
+q=49 F3(4)=2256 predicted 2256 -> EQUAL (5s)
+q=121 F3(4)=14760 predicted 14760 -> EQUAL (105s)
+q=125 F3(4)=15498 predicted 15498 -> EQUAL (256s)
+q=9 EXPLORATORY F3(4)-(q-2)(q+1) = 2 (0s)
+q=27 EXPLORATORY F3(4)-(q-2)(q+1) = -52 (0s)
+q=81 EXPLORATORY F3(4)-(q-2)(q+1) = 2 (87s)
+H-P4-SCOPE: PASS

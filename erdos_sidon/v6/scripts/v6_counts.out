@@ -1,0 +1,6 @@
+CONTROL vs sympy brute force: PASS
+Kaggle a: primes in [5000, 13000) tested 878, failures []
+Kaggle b: primes in [13000, 20000) tested 715, failures []
+CONTROL (brute-force REF q=5..19, N1 formula): PASS
+local: 666 primes 7..4999, failures []
+TOTAL primes with (N3) checked: 2259, failures 0

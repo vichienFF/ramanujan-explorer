@@ -1,0 +1,7 @@
+q=97 CONTROL True got (-1116, -94, -22, 0, -264) pred (-1116, -94, -22, 0, -264) -> OK
+q=101 CONTROL True got (-1164, -104, -22, 0, -296) pred (-1164, -104, -22, 0, -296) -> OK
+q=103 CONTROL True got (0, -106, 0, 0, -304) pred (0, -106, 0, 0, -304) -> OK
+q=107 CONTROL True got (0, -104, 0, 0, -312) pred (0, -104, 0, 0, -312) -> OK
+q=109 CONTROL True got (-1260, -112, -22, 0, -312) pred (-1260, -112, -22, 0, -312) -> OK
+q=113 CONTROL True got (-1308, -110, -22, 0, -320) pred (-1308, -110, -22, 0, -320) -> OK
+H-N3CAT: PASS

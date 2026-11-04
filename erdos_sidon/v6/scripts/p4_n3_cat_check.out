@@ -1,0 +1,7 @@
+q=67 CONTROL True got (0, -64, 0, 0, -184) pred (0, -64, 0, 0, -184) -> OK
+q=71 CONTROL True got (0, -74, 0, 0, -216) pred (0, -74, 0, 0, -216) -> OK
+q=73 CONTROL True got (-828, -70, -22, 0, -192) pred (-828, -70, -22, 0, -192) -> OK
+q=79 CONTROL True got (0, -82, 0, 0, -232) pred (0, -82, 0, 0, -232) -> OK
+q=83 CONTROL True got (0, -80, 0, 0, -240) pred (0, -80, 0, 0, -240) -> OK
+q=89 CONTROL True got (-1020, -86, -22, 0, -248) pred (-1020, -86, -22, 0, -248) -> OK
+H-N3CAT: PASS

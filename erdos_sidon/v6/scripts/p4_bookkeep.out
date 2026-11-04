@@ -1,0 +1,11 @@
+q=5 CONTROL Jacobsthal True | step2 True step3 True step4 False | B=5 rhs=5 -> EQUAL
+q=7 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=5 rhs=5 -> EQUAL
+q=9 CONTROL Jacobsthal True | step2 True step3 True step4 False | B=27 rhs=18 -> DIFFER
+q=11 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=11 rhs=11 -> EQUAL
+q=13 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=17 rhs=17 -> EQUAL
+q=19 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=-7 rhs=-7 -> EQUAL
+q=27 CONTROL Jacobsthal True | step2 True step3 True step4 False | B=27 rhs=0 -> DIFFER
+q=31 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=77 rhs=77 -> EQUAL
+q=49 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=53 rhs=53 -> EQUAL
+q=121 CONTROL Jacobsthal True | step2 True step3 True step4 True | B=605 rhs=605 -> EQUAL
+q=125 CONTROL Jacobsthal True | step2 True step3 True step4 False | B=125 rhs=125 -> EQUAL
