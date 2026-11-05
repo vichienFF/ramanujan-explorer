@@ -1,0 +1,22 @@
+CONTROLS: PASS
+best eps: sign 1 * chars [3] ; primes failing trT = eps*b_p: [] (of 43)
+p=7 trT=-2 b_p=2 B=5 B-2p=-9
+p=11 trT=0 b_p=0 B=11 B-2p=-11
+p=13 trT=-22 b_p=-22 B=17 B-2p=-9
+p=17 trT=0 b_p=0 B=51 B-2p=17
+p=19 trT=-26 b_p=26 B=-7 B-2p=-45
+p=23 trT=0 b_p=0 B=23 B-2p=-23
+p=29 trT=0 b_p=0 B=87 B-2p=29
+p=31 trT=46 b_p=-46 B=77 B-2p=15
+B(p) = 2p + (-1/p)p + trT(p): failures [] (of 43)
+CONTROLS: PASS
+best eps: sign 1 * chars [3] ; primes failing trT = eps*b_p: [] (of 35)
+p=211 trT=166 b_p=-166 B=377 B-2p=-45
+p=223 trT=-338 b_p=338 B=-115 B-2p=-561
+p=227 trT=0 b_p=0 B=227 B-2p=-227
+p=229 trT=26 b_p=26 B=713 B-2p=255
+p=233 trT=0 b_p=0 B=699 B-2p=233
+p=239 trT=0 b_p=0 B=239 B-2p=-239
+p=241 trT=-286 b_p=-286 B=437 B-2p=-45
+p=251 trT=0 b_p=0 B=251 B-2p=-251
+B(p) = 2p + (-1/p)p + trT(p): failures [] (of 35)

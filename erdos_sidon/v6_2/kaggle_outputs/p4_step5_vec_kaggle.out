@@ -1,0 +1,6 @@
+CONTROL (vectorised = scalar p4_step5_pp.pieces at q=49, 13, 121): PASS
+q=13^4=28561 brute {'c=1': 57094, 'c+d=0': -28542, 'rep': -57092} | SPEC -28540 | closed {'c=1': 57094, 'c+d=0': -28542, 'rep': -57092} | target -28540 -> EQUAL (168s)
+q=11^4=14641 brute {'c=1': 29250, 'c+d=0': -14626, 'rep': -29244} | SPEC -14620 | closed {'c=1': 29250, 'c+d=0': -14626, 'rep': -29244} | target -14620 -> EQUAL (45s)
+q=7^5=16807 brute {'c=1': 33602, 'c+d=0': -16804, 'rep': -33604} | SPEC -16806 | closed {'c=1': 33602, 'c+d=0': -16804, 'rep': -33604} | target -16806 -> EQUAL (66s)
+q=19^3=6859 brute {'c=1': 13708, 'c+d=0': -6860, 'rep': -13692} | SPEC -6844 | closed {'c=1': 13708, 'c+d=0': -6860, 'rep': -13692} | target -6844 -> EQUAL (10s)
+q=17^4=83521 brute {'c=1': 167010, 'c+d=0': -83506, 'rep': -167004} | SPEC -83500 | closed {'c=1': 167010, 'c+d=0': -83506, 'rep': -167004} | target -83500 -> EQUAL (1870s)
